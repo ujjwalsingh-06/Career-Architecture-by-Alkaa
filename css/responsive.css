@@ -437,3 +437,218 @@ overflow-y:auto;
 }
 
 }
+/* MOBILE FINAL FIX */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .container {
+    width: 90% !important;
+  }
+
+  .site-header {
+    height: 78px !important;
+  }
+
+  .nav-wrapper {
+    height: 78px !important;
+  }
+
+  .logo {
+    min-width: auto !important;
+  }
+
+  .logo span {
+    font-size: 26px !important;
+  }
+
+  .logo small {
+    font-size: 8px !important;
+    letter-spacing: 1.3px !important;
+  }
+
+  .menu-toggle {
+    display: flex !important;
+  }
+
+  .nav-btn {
+    display: none !important;
+  }
+
+  .navbar {
+    position: fixed !important;
+    top: 78px !important;
+    right: -100% !important;
+    width: 82% !important;
+    height: calc(100vh - 78px) !important;
+    background: #071b33 !important;
+    padding: 40px 28px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 24px !important;
+    transition: 0.35s ease !important;
+    z-index: 99999 !important;
+  }
+
+  .navbar.active {
+    right: 0 !important;
+  }
+
+  .navbar a {
+    color: #f7f1e8 !important;
+    font-size: 17px !important;
+  }
+
+  .hero,
+  .about-premium-hero,
+  .page-hero {
+    padding-top: 115px !important;
+    padding-bottom: 60px !important;
+  }
+
+  .hero-grid,
+  .about-hero-grid,
+  .page-hero-grid,
+  .advantage-grid,
+  .founder-grid,
+  .process-grid,
+  .two-column,
+  .featured-resource-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+
+  h1,
+  .hero-content h1,
+  .split-title,
+  .about-hero-content h1 {
+    font-size: 40px !important;
+    line-height: 1.02 !important;
+    letter-spacing: -1px !important;
+  }
+
+  h2,
+  .section-title h2,
+  .section-heading,
+  .process-left h2,
+  .quote-box h2,
+  .cta-box h2 {
+    font-size: 34px !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.8px !important;
+  }
+
+  .hero-description,
+  .hero-text,
+  .section-right p,
+  .process-left p,
+  .advantage-content p,
+  .founder-content p {
+    font-size: 15.5px !important;
+    line-height: 1.75 !important;
+  }
+
+  .hero-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .btn {
+    width: 100% !important;
+    padding: 15px 20px !important;
+    font-size: 14px !important;
+  }
+
+  .about-hero-visual img,
+  .hero-visual img,
+  .arch-card img,
+  .featured-resource-image img,
+  .founder-image img,
+  .founder-image-wrap img {
+    height: 320px !important;
+    border-radius: 24px !important;
+    object-fit: cover !important;
+  }
+
+  .floating-badge {
+    display: none !important;
+  }
+
+  .partner-grid,
+  .story-grid,
+  .mission-grid,
+  .values-grid,
+  .impact-grid,
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .partner-card,
+  .mission-card,
+  .value-card,
+  .process-step,
+  .story-card {
+    padding: 26px !important;
+    border-radius: 22px !important;
+    min-height: auto !important;
+  }
+
+  .partner-card h3,
+  .mission-card h3,
+  .value-card h3,
+  .process-step h3,
+  .story-card h3 {
+    font-size: 25px !important;
+  }
+
+  .impact-card h3,
+  .stat-item h3 {
+    font-size: 48px !important;
+  }
+
+  .journey-section {
+    display: block !important;
+    height: auto !important;
+    padding: 70px 0 !important;
+  }
+
+  .journey-track {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 90% !important;
+  }
+
+  .journey-panel,
+  .journey-panel.intro-panel {
+    width: auto !important;
+    min-height: auto !important;
+    padding: 28px !important;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr !important;
+    padding: 24px !important;
+  }
+
+  .contact-form textarea,
+  .contact-form button {
+    grid-column: auto !important;
+    width: 100% !important;
+  }
+
+  .cta-box {
+    padding: 32px 24px !important;
+    border-radius: 26px !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cursor,
+  .cursor-follower {
+    display: none !important;
+  }
+}
