@@ -1,0 +1,91 @@
+.signature-loader {
+  position: fixed;
+  inset: 0;
+  background: #06172b;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.signature-loader.hide-loader {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.signature-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(183, 122, 69, 0.22), transparent 34%),
+    radial-gradient(circle at 20% 80%, rgba(214, 166, 111, 0.12), transparent 28%),
+    #06172b;
+}
+
+.signature-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: min(900px, 90%);
+}
+
+.loader-brand {
+  font-family: "Cormorant Garamond", serif;
+  color: #f7f1e8;
+  font-size: clamp(38px, 5vw, 72px);
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(25px);
+}
+
+.signature-svg {
+  width: min(760px, 92vw);
+  height: auto;
+  filter: drop-shadow(0 0 18px rgba(214, 166, 111, 0.35));
+}
+
+.sig-path,
+.sig-underline {
+  stroke: #d6a66f;
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+}
+
+.sig-underline {
+  stroke-width: 4;
+  opacity: 0.9;
+}
+
+.signature-name {
+  font-family: "Cormorant Garamond", serif;
+  color: #f7f1e8;
+  font-size: clamp(36px, 5vw, 76px);
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.loader-subtitle {
+  color: rgba(247, 241, 232, 0.65);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-top: 10px;
+  opacity: 0;
+}
+
+body.loader-active {
+  overflow: hidden;
+}
+
+body.loader-done {
+  overflow: auto;
+}
