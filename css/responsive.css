@@ -1,0 +1,439 @@
+/* ==========================================================
+   RESPONSIVE DESIGN
+   Premium Mobile + Tablet Layout
+==========================================================*/
+
+/* Large Laptop */
+
+@media (max-width:1400px){
+
+.hero-bg-text{
+font-size:260px;
+}
+
+.container{
+width:92%;
+}
+
+}
+
+/* Laptop */
+
+@media (max-width:1200px){
+
+.about-hero-grid,
+.hero-grid,
+.page-hero-grid,
+.two-column,
+.founder-premium-grid,
+.process-grid,
+.advantage-grid,
+.founder-grid{
+
+grid-template-columns:1fr;
+gap:70px;
+
+}
+
+.hero-bg-text{
+
+font-size:190px;
+
+}
+
+.values-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.mission-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.cta-box{
+
+flex-direction:column;
+align-items:flex-start;
+
+}
+
+}
+
+/* Tablet */
+
+@media (max-width:992px){
+
+.navbar{
+
+position:fixed;
+top:0;
+right:-100%;
+width:320px;
+height:100vh;
+background:#071b33;
+padding:120px 40px;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+gap:25px;
+transition:.45s ease;
+z-index:999;
+
+}
+
+.navbar.active{
+
+right:0;
+
+}
+
+.navbar a{
+
+color:#fff;
+
+}
+
+.menu-toggle{
+
+display:flex;
+z-index:1001;
+
+}
+
+.nav-btn{
+
+display:none;
+
+}
+
+.about-premium-hero{
+
+padding-top:150px;
+
+}
+
+.about-hero-content h1,
+.split-title{
+
+font-size:68px;
+
+}
+
+.section-heading,
+.section-title h2,
+.process-left h2,
+.founder-story-content h2,
+.quote-box h2{
+
+font-size:54px;
+
+}
+
+.hero-bg-text{
+
+font-size:150px;
+
+}
+
+.floating-badge{
+
+display:none;
+
+}
+
+.about-hero-visual img{
+
+height:500px;
+
+}
+
+.founder-image-wrap img{
+
+height:500px;
+
+}
+
+.timeline{
+
+padding-left:20px;
+
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.section-padding,
+.premium-section{
+
+padding:80px 0;
+
+}
+
+.container{
+
+width:92%;
+
+}
+
+.logo span{
+
+font-size:26px;
+
+}
+
+.hero-bg-text{
+
+display:none;
+
+}
+
+.about-premium-hero{
+
+padding-top:130px;
+min-height:auto;
+
+}
+
+.about-hero-grid{
+
+gap:45px;
+
+}
+
+.about-hero-content h1,
+.split-title{
+
+font-size:46px;
+line-height:1;
+
+}
+
+.hero-description{
+
+font-size:16px;
+
+}
+
+.hero-actions{
+
+flex-direction:column;
+align-items:flex-start;
+
+}
+
+.btn{
+
+width:100%;
+justify-content:center;
+
+}
+
+.about-hero-visual img{
+
+height:380px;
+
+}
+
+.founder-image-wrap img{
+
+height:380px;
+
+}
+
+.two-column{
+
+gap:40px;
+
+}
+
+.values-grid,
+.mission-grid,
+.stats-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.process-grid{
+
+gap:45px;
+
+}
+
+.process-left{
+
+position:relative;
+top:0;
+
+}
+
+.process-step{
+
+padding:28px;
+
+}
+
+.cta-box{
+
+padding:40px 28px;
+
+}
+
+.cta-box h2{
+
+font-size:42px;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr;
+gap:40px;
+
+}
+
+.stat-item{
+
+border-right:none;
+border-bottom:1px solid rgba(255,255,255,.1);
+
+}
+
+.stat-item:last-child{
+
+border-bottom:none;
+
+}
+
+.journey-section{
+
+display:none;
+
+}
+
+}
+
+/* Small Mobile */
+
+@media (max-width:576px){
+
+.about-hero-content h1,
+.split-title{
+
+font-size:38px;
+
+}
+
+.section-heading,
+.section-title h2,
+.process-left h2,
+.founder-story-content h2,
+.quote-box h2{
+
+font-size:36px;
+
+}
+
+blockquote{
+
+font-size:22px;
+padding:20px;
+
+}
+
+.hero-description{
+
+font-size:15px;
+
+}
+
+.mission-card,
+.value-card,
+.process-step{
+
+padding:25px;
+
+}
+
+.mission-card h3,
+.value-card h3{
+
+font-size:28px;
+
+}
+
+.footer h3{
+
+font-size:34px;
+
+}
+
+}
+
+/* Extra Small */
+
+@media (max-width:400px){
+
+.logo span{
+
+font-size:22px;
+
+}
+
+.about-hero-content h1,
+.split-title{
+
+font-size:32px;
+
+}
+
+.btn{
+
+padding:14px 18px;
+font-size:13px;
+
+}
+
+.about-hero-visual img{
+
+height:320px;
+
+}
+
+.founder-image-wrap img{
+
+height:320px;
+
+}
+
+}
+
+/* Landscape Phones */
+
+@media (max-height:600px){
+
+.about-premium-hero{
+
+padding-top:110px;
+
+}
+
+.navbar{
+
+overflow-y:auto;
+
+}
+
+}
