@@ -1,24 +1,14 @@
 {
   "version": 2,
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": false,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
-      ]
-    }
+  "rewrites": [
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/solutions", "destination": "/solutions.html" },
+    { "source": "/programs", "destination": "/programs.html" },
+    { "source": "/resources", "destination": "/resources.html" },
+    { "source": "/media", "destination": "/media.html" },
+    { "source": "/success-stories", "destination": "/success-stories.html" },
+    { "source": "/contact", "destination": "/contact.html" }
   ]
 }
