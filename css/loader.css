@@ -174,3 +174,33 @@ body.loader-done {
 body.loader-active {
   overflow: hidden;
 }
+.loader-brand {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.signature-loader {
+  min-height: 100vh;
+}
+
+.signature-loader.hide-loader {
+  display: none !important;
+}
+
+.real-signature-wrap {
+  width: min(760px, 90vw);
+  margin: 35px auto;
+  overflow: hidden;
+  clip-path: inset(0 100% 0 0);
+}
+
+.real-signature {
+  width: 100%;
+  display: block;
+  filter: invert(78%) sepia(38%) saturate(654%) hue-rotate(343deg) brightness(95%) contrast(92%);
+}
+
+.loader-subtitle {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
