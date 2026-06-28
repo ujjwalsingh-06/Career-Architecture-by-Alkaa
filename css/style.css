@@ -1096,3 +1096,144 @@ footer,
     padding: 0 20px !important;
   }
 }
+/* UNIVERSAL OVERLAP FIX */
+
+.about-premium-hero {
+  min-height: auto !important;
+  padding: 180px 0 90px !important;
+}
+
+.about-hero-grid,
+.process-grid,
+.two-column,
+.founder-premium-grid,
+.featured-resource-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 60px !important;
+  align-items: center !important;
+}
+
+.process-grid {
+  align-items: start !important;
+}
+
+.process-left {
+  position: relative !important;
+  top: auto !important;
+  z-index: 1 !important;
+}
+
+.process-left h2,
+.section-heading,
+.section-title h2,
+.featured-resource-content h3,
+.quote-box h2 {
+  font-size: clamp(34px, 4vw, 58px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -1px !important;
+  max-width: 100% !important;
+  margin-bottom: 22px !important;
+}
+
+.process-left p,
+.section-right p,
+.featured-resource-content p {
+  font-size: 17px !important;
+  line-height: 1.8 !important;
+  max-width: 100% !important;
+}
+
+.process-right {
+  display: grid !important;
+  gap: 22px !important;
+}
+
+.process-step {
+  min-height: auto !important;
+  padding: 32px !important;
+  overflow: visible !important;
+}
+
+.process-step h3 {
+  font-size: 30px !important;
+  line-height: 1.15 !important;
+}
+
+.process-step p {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+
+.value-card,
+.mission-card {
+  min-height: auto !important;
+  overflow: visible !important;
+}
+
+.value-card h3,
+.mission-card h3 {
+  font-size: 30px !important;
+  line-height: 1.15 !important;
+}
+
+.about-hero-visual img,
+.featured-resource-image img {
+  height: 520px !important;
+  object-fit: cover !important;
+}
+
+.image-reveal {
+  background: transparent !important;
+}
+
+.image-reveal::before {
+  display: none !important;
+}
+
+/* blank navy image box fix */
+.image-reveal img {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+/* agar image missing ho to huge blank box na dikhe */
+.image-reveal:has(img[src=""]) {
+  display: none !important;
+}
+
+@media (max-width: 1100px) {
+  .about-hero-grid,
+  .process-grid,
+  .two-column,
+  .founder-premium-grid,
+  .featured-resource-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .process-left h2,
+  .section-heading,
+  .section-title h2,
+  .quote-box h2 {
+    font-size: 42px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-premium-hero {
+    padding: 140px 0 70px !important;
+  }
+
+  .process-left h2,
+  .section-heading,
+  .section-title h2,
+  .quote-box h2 {
+    font-size: 34px !important;
+  }
+
+  .about-hero-visual img,
+  .featured-resource-image img {
+    height: 360px !important;
+  }
+}
