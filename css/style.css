@@ -1287,3 +1287,27 @@ footer,
     width: 100% !important;
   }
 }
+.real-signature-wrap{
+    width:700px;
+    max-width:90%;
+    margin:35px auto;
+    overflow:hidden;
+    clip-path: inset(0 100% 0 0);
+}
+
+.real-signature{
+    width:100%;
+    display:block;
+
+    filter:
+    brightness(0)
+    saturate(100%)
+    invert(73%)
+    sepia(32%)
+    saturate(575%)
+    hue-rotate(353deg)
+    brightness(95%)
+    contrast(90%);
+
+    transform:scale(.95);
+}
