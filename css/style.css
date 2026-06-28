@@ -759,3 +759,38 @@ footer,
 .intro-panel h2 {
   font-size: 48px !important;
 }
+.journey-section {
+  height: auto !important;
+  min-height: auto !important;
+  overflow: visible !important;
+  padding: 100px 0 !important;
+}
+
+.journey-track {
+  width: min(1180px, 92%) !important;
+  margin: auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 24px !important;
+  transform: none !important;
+}
+
+.journey-panel,
+.journey-panel.intro-panel {
+  width: auto !important;
+  min-height: auto !important;
+  padding: 45px !important;
+  border-radius: 28px !important;
+}
+
+.journey-panel span {
+  font-size: 42px !important;
+}
+
+.journey-panel h3 {
+  font-size: 34px !important;
+}
+
+.intro-panel h2 {
+  font-size: 48px !important;
+}
