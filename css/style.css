@@ -1311,3 +1311,146 @@ footer,
 
     transform:scale(.95);
 }
+/* PREMIUM GLOBAL FONT + NUMBER FIX */
+
+body {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+h1, h2, h3, h4,
+.logo span,
+.impact-card h3,
+.stat-item h3,
+.center-box strong {
+  font-family: "Cormorant Garamond", serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.6px !important;
+}
+
+p, a, li, small,
+.navbar a,
+.btn,
+.nav-btn {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 500 !important;
+}
+
+/* premium small label */
+.eyebrow,
+.section-title span {
+  font-family: "Inter", sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: 4px !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  color: var(--bronze) !important;
+}
+
+/* partner cards numbers */
+.icon,
+.partner-card .icon,
+.mission-card span,
+.process-step span,
+.value-card span {
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: 34px !important;
+  font-weight: 700 !important;
+  color: var(--bronze) !important;
+  line-height: 1 !important;
+  margin-bottom: 18px !important;
+  display: block !important;
+}
+
+/* card typography premium */
+.partner-card h3,
+.mission-card h3,
+.value-card h3,
+.process-step h3,
+.story-card h3 {
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: 30px !important;
+  line-height: 1.05 !important;
+  font-weight: 700 !important;
+  color: var(--navy) !important;
+  margin-bottom: 12px !important;
+}
+
+.partner-card p,
+.mission-card p,
+.value-card p,
+.process-step p,
+.story-card p {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  color: var(--muted) !important;
+}
+
+/* impact section number fix */
+.impact-grid,
+.stats-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px !important;
+}
+
+.impact-card,
+.stat-item {
+  text-align: center !important;
+  padding: 38px 24px !important;
+}
+
+.impact-card h3,
+.stat-item h3 {
+  font-size: 68px !important;
+  line-height: 1 !important;
+  color: var(--bronze-2) !important;
+  margin-bottom: 14px !important;
+}
+
+.impact-card p,
+.stat-item p {
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: rgba(247, 241, 232, 0.82) !important;
+}
+
+/* section spacing fix */
+.impact {
+  padding: 95px 0 !important;
+}
+
+.partners {
+  padding: 110px 0 !important;
+}
+
+.partner-card {
+  padding: 38px 34px !important;
+}
+
+/* mobile fix */
+@media (max-width: 992px) {
+  .impact-grid,
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .impact-grid,
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .impact-card h3,
+  .stat-item h3 {
+    font-size: 52px !important;
+  }
+
+  .partner-card h3,
+  .mission-card h3,
+  .value-card h3,
+  .process-step h3 {
+    font-size: 26px !important;
+  }
+}
