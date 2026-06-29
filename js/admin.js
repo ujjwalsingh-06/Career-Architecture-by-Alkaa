@@ -627,3 +627,60 @@ document.querySelectorAll(".admin-nav .nav-item").forEach((btn) => {
     }
   });
 });
+const hpHeroTitle = document.getElementById("hpHeroTitle");
+const hpHeroSubtitle = document.getElementById("hpHeroSubtitle");
+const hpHeroImage = document.getElementById("hpHeroImage");
+const hpFounderName = document.getElementById("hpFounderName");
+const hpFounderDescription = document.getElementById("hpFounderDescription");
+const hpFounderImage = document.getElementById("hpFounderImage");
+const hpFooterCompany = document.getElementById("hpFooterCompany");
+const hpEmail = document.getElementById("hpEmail");
+const hpPhone = document.getElementById("hpPhone");
+const saveHomepageBtn = document.getElementById("saveHomepageBtn");
+
+async function loadHomepageEditor() {
+  const { data, error } = await supabaseClient
+    .from("homepage")
+    .select("*")
+    .limit(1)
+    .single();
+
+  if (error || !data) return;
+
+  hpHeroTitle.value = data.hero_title || "";
+  hpHeroSubtitle.value = data.hero_subtitle || "";
+  hpHeroImage.value = data.hero_image || "";
+  hpFounderName.value = data.founder_name || "";
+  hpFounderDescription.value = data.founder_description || "";
+  hpFounderImage.value = data.founder_image || "";
+  hpFooterCompany.value = data.footer_company || "";
+  hpEmail.value = data.contact_email || "";
+  hpPhone.value = data.contact_phone || "";
+}
+
+saveHomepageBtn?.addEventListener("click", async () => {
+  const { error } = await supabaseClient
+    .from("homepage")
+    .update({
+      hero_title: hpHeroTitle.value,
+      hero_subtitle: hpHeroSubtitle.value,
+      hero_image: hpHeroImage.value,
+      founder_name: hpFounderName.value,
+      founder_description: hpFounderDescription.value,
+      founder_image: hpFounderImage.value,
+      footer_company: hpFooterCompany.value,
+      contact_email: hpEmail.value,
+      contact_phone: hpPhone.value,
+      updated_at: new Date().toISOString()
+    })
+    .eq("id", 1);
+
+  if (error) {
+    showToast(error.message);
+    return;
+  }
+
+  showToast("Homepage Updated");
+});
+
+loadHomepageEditor();
