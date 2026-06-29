@@ -1,17 +1,16 @@
 document.addEventListener("DOMContentLoaded", async () => {
   if (typeof cms === "undefined") return;
 
-  const { data, error } = await cms.from("site_settings").select("*");
+  const { data, error } = await cms
+    .from("homepage")
+    .select("*")
+    .limit(1)
+    .single();
 
   if (error || !data) {
-    console.warn("CMS data not loaded", error);
+    console.warn("Homepage data not loaded", error);
     return;
   }
-
-  const settings = {};
-  data.forEach((item) => {
-    settings[item.setting_key] = item.setting_value;
-  });
 
   const setText = (id, value) => {
     const el = document.getElementById(id);
@@ -23,14 +22,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (el && value) el.src = value;
   };
 
-  setText("homeHeroTitle", settings.hero_title);
-  setText("homeHeroSubtitle", settings.hero_subtitle);
-  setImage("homeHeroImage", settings.hero_image);
+  setText("homeHeroTitle", data.hero_title);
+  setText("homeHeroSubtitle", data.hero_subtitle);
+  setImage("homeHeroImage", data.hero_image);
 
-  setImage("founderImage", settings.founder_image);
-  setText("founderName", settings.founder_name);
-  setText("founderDescription", settings.founder_description);
+  setImage("founderImage", data.founder_image);
+  setText("founderName", data.founder_name);
+  setText("founderDescription", data.founder_description);
 
-  setText("footerCompany", settings.footer_company);
-  setText("siteEmail", settings.contact_email);
+  setText("footerCompany", data.footer_company);
+  setText("siteEmail", data.contact_email);
 });
