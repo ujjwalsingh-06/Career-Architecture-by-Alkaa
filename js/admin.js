@@ -613,3 +613,17 @@ loadResources();
 loadMedia();
 
 console.log("OppARC Admin Ready");
+const adminMenuBtn = document.getElementById("adminMenuBtn");
+const adminSidebar = document.querySelector(".admin-sidebar");
+
+adminMenuBtn?.addEventListener("click", () => {
+  adminSidebar?.classList.toggle("active");
+});
+
+document.querySelectorAll(".admin-nav .nav-item").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    if (window.innerWidth <= 1100) {
+      adminSidebar?.classList.remove("active");
+    }
+  });
+});
