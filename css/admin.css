@@ -1,0 +1,1131 @@
+/* ===========================
+   OppARC Premium Admin Panel
+   Part 1
+===========================*/
+
+:root{
+
+--navy:#071b33;
+--navy-light:#0f2746;
+
+--gold:#b77a45;
+--gold-light:#d9b07b;
+
+--white:#ffffff;
+--cream:#f7f1e8;
+
+--border:#e7dccd;
+
+--shadow:
+0 20px 60px rgba(0,0,0,.08);
+
+--radius:22px;
+
+--transition:.35s;
+
+font-family:Inter,sans-serif;
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#f7f5f1;
+
+font-family:Inter,sans-serif;
+
+color:var(--navy);
+
+}
+
+/* LOGIN */
+
+.admin-login{
+
+height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:30px;
+
+background:
+
+linear-gradient(
+135deg,
+#071b33,
+#0d2749);
+
+}
+
+.login-card{
+
+width:460px;
+
+max-width:100%;
+
+background:#fff;
+
+border-radius:26px;
+
+padding:50px;
+
+box-shadow:var(--shadow);
+
+}
+
+.login-logo{
+
+text-align:center;
+
+margin-bottom:35px;
+
+}
+
+.login-logo h1{
+
+font-size:52px;
+
+font-family:"Cormorant Garamond",serif;
+
+color:var(--navy);
+
+}
+
+.login-logo p{
+
+margin-top:8px;
+
+color:#777;
+
+}
+
+.login-form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+.login-form label{
+
+font-size:14px;
+
+font-weight:700;
+
+}
+
+.login-form input{
+
+height:58px;
+
+border-radius:14px;
+
+border:1px solid var(--border);
+
+padding:0 18px;
+
+font-size:15px;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+.login-form input:focus{
+
+border-color:var(--gold);
+
+}
+
+.login-form button{
+
+height:60px;
+
+border:none;
+
+cursor:pointer;
+
+border-radius:14px;
+
+background:var(--gold);
+
+color:#fff;
+
+font-size:15px;
+
+font-weight:700;
+
+transition:.3s;
+
+}
+
+.login-form button:hover{
+
+background:#94633a;
+
+}
+
+.login-note{
+
+margin-top:25px;
+
+text-align:center;
+
+font-size:13px;
+
+color:#888;
+
+}
+
+/* DASHBOARD */
+
+.admin-app{
+
+display:grid;
+
+grid-template-columns:
+
+300px
+1fr;
+
+min-height:100vh;
+
+}
+
+/* SIDEBAR */
+
+.admin-sidebar{
+
+background:var(--navy);
+
+padding:40px 28px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+}
+
+.sidebar-logo h2{
+
+font-family:
+
+"Cormorant Garamond",
+serif;
+
+font-size:44px;
+
+color:#fff;
+
+}
+
+.sidebar-logo p{
+
+margin-top:6px;
+
+font-size:13px;
+
+color:#c8d2dd;
+
+letter-spacing:1px;
+
+}
+
+.admin-nav{
+
+margin-top:45px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+.nav-item{
+
+height:56px;
+
+border:none;
+
+background:transparent;
+
+border-radius:14px;
+
+text-align:left;
+
+padding:0 20px;
+
+font-size:15px;
+
+cursor:pointer;
+
+color:#fff;
+
+transition:.3s;
+
+}
+
+.nav-item:hover{
+
+background:rgba(255,255,255,.08);
+
+}
+
+.nav-item.active{
+
+background:var(--gold);
+
+}
+
+.logout-btn{
+
+height:56px;
+
+border:none;
+
+cursor:pointer;
+
+border-radius:14px;
+
+background:#d64545;
+
+color:#fff;
+
+font-weight:700;
+
+transition:.3s;
+
+}
+
+.logout-btn:hover{
+
+background:#bb2d2d;
+
+}
+
+/* MAIN */
+
+.admin-main{
+
+padding:55px;
+
+}
+
+.admin-topbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:45px;
+
+}
+
+.admin-topbar h1{
+
+font-family:
+
+"Cormorant Garamond",
+serif;
+
+font-size:52px;
+
+}
+
+.admin-topbar p{
+
+margin-top:8px;
+
+color:#777;
+
+}
+
+.admin-status{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+font-size:14px;
+
+font-weight:700;
+
+}
+
+.admin-status span{
+
+width:12px;
+
+height:12px;
+
+border-radius:50%;
+
+background:#26c66b;
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+.admin-section{
+
+display:none;
+
+}
+
+.active-section{
+
+display:block;
+
+}
+/* =========================================
+   DASHBOARD CARDS
+========================================= */
+
+.section-heading{
+margin-bottom:35px;
+}
+
+.section-heading h2{
+font-family:"Cormorant Garamond",serif;
+font-size:42px;
+color:var(--navy);
+margin-bottom:8px;
+}
+
+.section-heading p{
+font-size:15px;
+color:#6b7280;
+}
+
+.dashboard-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.dashboard-card{
+background:#fff;
+padding:30px;
+border-radius:22px;
+border:1px solid var(--border);
+box-shadow:var(--shadow);
+transition:all .35s ease;
+position:relative;
+overflow:hidden;
+}
+
+.dashboard-card::before{
+content:"";
+position:absolute;
+left:0;
+top:0;
+width:5px;
+height:100%;
+background:var(--gold);
+transform:scaleY(0);
+transform-origin:top;
+transition:.35s;
+}
+
+.dashboard-card:hover{
+transform:translateY(-8px);
+}
+
+.dashboard-card:hover::before{
+transform:scaleY(1);
+}
+
+.dashboard-card span{
+display:inline-flex;
+width:55px;
+height:55px;
+border-radius:50%;
+align-items:center;
+justify-content:center;
+background:rgba(183,122,69,.12);
+color:var(--gold);
+font-size:22px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.dashboard-card h3{
+font-family:"Cormorant Garamond",serif;
+font-size:30px;
+margin-bottom:10px;
+}
+
+.dashboard-card p{
+font-size:15px;
+line-height:1.7;
+color:#666;
+}
+
+/* =========================================
+   ADMIN CARD
+========================================= */
+
+.admin-card{
+background:#fff;
+padding:35px;
+border-radius:24px;
+border:1px solid var(--border);
+box-shadow:var(--shadow);
+margin-bottom:40px;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group{
+display:flex;
+flex-direction:column;
+margin-bottom:22px;
+}
+
+.form-group label{
+font-size:14px;
+font-weight:700;
+margin-bottom:10px;
+color:var(--navy);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+
+width:100%;
+
+border:1px solid var(--border);
+
+border-radius:14px;
+
+padding:16px 18px;
+
+font-size:15px;
+
+font-family:Inter,sans-serif;
+
+background:#fff;
+
+transition:.3s;
+
+outline:none;
+
+}
+
+.form-group textarea{
+
+resize:vertical;
+
+min-height:140px;
+
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+
+border-color:var(--gold);
+
+box-shadow:
+0 0 0 4px
+rgba(183,122,69,.15);
+
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.two-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(2,1fr);
+
+gap:22px;
+
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.primary-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+height:56px;
+
+padding:0 34px;
+
+background:var(--gold);
+
+color:#fff;
+
+border:none;
+
+border-radius:14px;
+
+font-size:15px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.primary-btn:hover{
+
+background:#9f6736;
+
+transform:translateY(-2px);
+
+}
+
+.primary-btn:active{
+
+transform:scale(.98);
+
+}
+
+/* =========================================
+   LIST AREA
+========================================= */
+
+#storiesList,
+#resourcesList,
+#mediaList{
+
+display:grid;
+
+gap:18px;
+
+margin-top:30px;
+
+}
+
+/* =========================================
+   ITEM CARD
+========================================= */
+
+.list-card{
+
+background:#faf8f4;
+
+border:1px solid var(--border);
+
+padding:24px;
+
+border-radius:18px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:20px;
+
+transition:.3s;
+
+}
+
+.list-card:hover{
+
+background:#fff;
+
+transform:translateY(-4px);
+
+}
+
+.list-card h4{
+
+font-size:22px;
+
+font-family:
+"Cormorant Garamond",
+serif;
+
+margin-bottom:6px;
+
+}
+
+.list-card p{
+
+font-size:14px;
+
+color:#666;
+
+line-height:1.6;
+
+}
+
+.list-actions{
+
+display:flex;
+
+gap:12px;
+
+}
+
+.edit-btn{
+
+background:#0d6efd;
+
+color:#fff;
+
+border:none;
+
+padding:10px 18px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-weight:600;
+
+}
+
+.delete-btn{
+
+background:#d93025;
+
+color:#fff;
+
+border:none;
+
+padding:10px 18px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-weight:600;
+
+}
+
+.edit-btn:hover{
+
+background:#0957d5;
+
+}
+
+.delete-btn:hover{
+
+background:#b3261e;
+
+}
+
+hr{
+
+margin:35px 0;
+
+border:none;
+
+border-top:1px solid var(--border);
+
+}
+/* =========================================
+   OppARC Admin Panel
+   Part 3 (Responsive + Premium UI)
+========================================= */
+
+/* SECTION ANIMATION */
+.admin-section{
+    display:none;
+    animation:fadeIn .35s ease;
+}
+
+.active-section{
+    display:block;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* TOAST */
+
+.toast{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    background:#071b33;
+
+    color:#fff;
+
+    padding:16px 26px;
+
+    border-radius:14px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.2);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.35s;
+
+    z-index:99999;
+
+}
+
+.toast.show{
+
+    opacity:1;
+
+}
+
+/* LOADER */
+
+.loading{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#777;
+
+}
+
+.loading::before{
+
+    content:"";
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    border:3px solid #ddd;
+
+    border-top-color:var(--gold);
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#ececec;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--gold);
+
+border-radius:30px;
+
+}
+
+/* INPUT PLACEHOLDER */
+
+input::placeholder,
+textarea::placeholder{
+
+color:#b1b1b1;
+
+}
+
+/* TABLE STYLE */
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin-top:20px;
+
+}
+
+table th{
+
+background:#071b33;
+
+color:#fff;
+
+padding:15px;
+
+text-align:left;
+
+}
+
+table td{
+
+padding:14px;
+
+border-bottom:1px solid #eee;
+
+font-size:14px;
+
+}
+
+table tr:hover{
+
+background:#faf8f4;
+
+}
+
+/* MOBILE */
+
+@media(max-width:1100px){
+
+.admin-app{
+
+grid-template-columns:1fr;
+
+}
+
+.admin-sidebar{
+
+position:fixed;
+
+left:-320px;
+
+top:0;
+
+width:300px;
+
+height:100vh;
+
+z-index:9999;
+
+transition:.35s;
+
+}
+
+.admin-sidebar.active{
+
+left:0;
+
+}
+
+.admin-main{
+
+padding:30px;
+
+margin-top:90px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.admin-topbar{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:18px;
+
+}
+
+.dashboard-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.two-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.admin-card{
+
+padding:24px;
+
+}
+
+.section-heading h2{
+
+font-size:34px;
+
+}
+
+.login-card{
+
+padding:35px;
+
+}
+
+.login-logo h1{
+
+font-size:42px;
+
+}
+
+.primary-btn{
+
+width:100%;
+
+}
+
+.list-card{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.list-actions{
+
+width:100%;
+
+}
+
+.edit-btn,
+.delete-btn{
+
+flex:1;
+
+}
+
+}
+
+/* PREMIUM HOVER */
+
+.admin-card,
+.dashboard-card,
+.list-card{
+
+transition:.35s ease;
+
+}
+
+.admin-card:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+
+0 30px 70px rgba(0,0,0,.08);
+
+}
+
+/* BUTTON RIPPLE */
+
+.primary-btn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.primary-btn::after{
+
+content:"";
+
+position:absolute;
+
+width:0;
+
+height:0;
+
+background:rgba(255,255,255,.25);
+
+border-radius:50%;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+transition:.45s;
+
+}
+
+.primary-btn:hover::after{
+
+width:340px;
+
+height:340px;
+
+}
+
+/* PREMIUM FOCUS */
+
+button:focus,
+input:focus,
+textarea:focus{
+
+outline:none;
+
+}
+
+/* END */
