@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>OppARC Admin Panel</title>
+
+  <link rel="stylesheet" href="css/admin.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+</head>
+
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <section class="admin-login" id="loginScreen">
+    <div class="login-card">
+      <div class="login-logo">
+        <h1>OppARC</h1>
+        <p>Admin Control Panel</p>
+      </div>
+
+      <form id="loginForm" class="login-form">
+        <label>Email Address</label>
+        <input type="email" id="loginEmail" placeholder="admin@opparc.com" required />
+
+        <label>Password</label>
+        <input type="password" id="loginPassword" placeholder="Enter password" required />
+
+        <button type="submit">Login to Dashboard</button>
+      </form>
+
+      <p class="login-note">
+        Secure access for website content management.
+      </p>
+    </div>
+  </section>
+
+  <!-- ADMIN DASHBOARD -->
+  <section class="admin-app hidden" id="adminApp">
+
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar">
+      <div class="sidebar-logo">
+        <h2>OppARC</h2>
+        <p>Admin Panel</p>
+      </div>
+
+      <nav class="admin-nav">
+        <button class="nav-item active" data-section="dashboardSection">Dashboard</button>
+        <button class="nav-item" data-section="heroSection">Hero Settings</button>
+        <button class="nav-item" data-section="contactSection">Contact Info</button>
+        <button class="nav-item" data-section="storiesSection">Success Stories</button>
+        <button class="nav-item" data-section="resourcesSection">Resources</button>
+        <button class="nav-item" data-section="mediaSection">Media</button>
+      </nav>
+
+      <button class="logout-btn" id="logoutBtn">Logout</button>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="admin-main">
+
+      <header class="admin-topbar">
+        <div>
+          <h1>Website Dashboard</h1>
+          <p>Manage OppARC website content from one place.</p>
+        </div>
+
+        <div class="admin-status">
+          <span></span>
+          Connected
+        </div>
+      </header>
+
+      <!-- DASHBOARD SECTION -->
+      <section class="admin-section active-section" id="dashboardSection">
+        <div class="section-heading">
+          <h2>Dashboard Overview</h2>
+          <p>Quick view of your website content modules.</p>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="dashboard-card">
+            <span>01</span>
+            <h3>Hero Section</h3>
+            <p>Edit homepage headline and subtitle.</p>
+          </div>
+
+          <div class="dashboard-card">
+            <span>02</span>
+            <h3>Contact Details</h3>
+            <p>Update phone number and email address.</p>
+          </div>
+
+          <div class="dashboard-card">
+            <span>03</span>
+            <h3>Success Stories</h3>
+            <p>Add, update or remove transformation stories.</p>
+          </div>
+
+          <div class="dashboard-card">
+            <span>04</span>
+            <h3>Resources</h3>
+            <p>Manage articles, guides and downloads.</p>
+          </div>
+        </div>
+      </section>
+            <!-- HERO SETTINGS -->
+      <section class="admin-section" id="heroSection">
+
+        <div class="section-heading">
+          <h2>Hero Section</h2>
+          <p>Edit the homepage hero content.</p>
+        </div>
+
+        <div class="admin-card">
+
+          <div class="form-group">
+            <label>Hero Title</label>
+
+            <textarea
+              id="heroTitle"
+              rows="4"
+              placeholder="Hero Title"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Hero Subtitle</label>
+
+            <textarea
+              id="heroSubtitle"
+              rows="6"
+              placeholder="Hero Subtitle"></textarea>
+          </div>
+
+          <button
+            id="saveHeroBtn"
+            class="primary-btn">
+            Save Hero Section
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- CONTACT SETTINGS -->
+      <section class="admin-section" id="contactSection">
+
+        <div class="section-heading">
+          <h2>Contact Information</h2>
+          <p>Update phone number and email.</p>
+        </div>
+
+        <div class="admin-card">
+
+          <div class="two-grid">
+
+            <div class="form-group">
+              <label>Email Address</label>
+
+              <input
+                type="email"
+                id="contactEmail"
+                placeholder="hello@opparc.com">
+            </div>
+
+            <div class="form-group">
+              <label>Phone Number</label>
+
+              <input
+                type="text"
+                id="contactPhone"
+                placeholder="+91 9876543210">
+            </div>
+
+          </div>
+
+          <button
+            id="saveContactBtn"
+            class="primary-btn">
+            Save Contact Details
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- SUCCESS STORIES -->
+      <section class="admin-section" id="storiesSection">
+
+        <div class="section-heading">
+          <h2>Success Stories</h2>
+          <p>Add or update transformation stories.</p>
+        </div>
+
+        <div class="admin-card">
+
+          <div class="form-group">
+            <label>Story Title</label>
+
+            <input
+              id="storyTitle"
+              type="text"
+              placeholder="Regional Manager → Vice President">
+          </div>
+
+          <div class="form-group">
+            <label>Before</label>
+
+            <textarea
+              id="storyBefore"
+              rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>After</label>
+
+            <textarea
+              id="storyAfter"
+              rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Description</label>
+
+            <textarea
+              id="storyDescription"
+              rows="6"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Image URL</label>
+
+            <input
+              id="storyImage"
+              type="text"
+              placeholder="https://...">
+          </div>
+
+          <button
+            id="addStoryBtn"
+            class="primary-btn">
+            Add Success Story
+          </button>
+
+          <hr>
+
+          <div id="storiesList">
+
+          </div>
+
+        </div>
+
+      </section>
+            <!-- RESOURCES -->
+      <section class="admin-section" id="resourcesSection">
+        <div class="section-heading">
+          <h2>Resources</h2>
+          <p>Add articles, guides and downloads.</p>
+        </div>
+
+        <div class="admin-card">
+          <div class="form-group">
+            <label>Resource Title</label>
+            <input id="resourceTitle" type="text" placeholder="Career Clarity Blueprint">
+          </div>
+
+          <div class="form-group">
+            <label>Category</label>
+            <input id="resourceCategory" type="text" placeholder="Career Strategy">
+          </div>
+
+          <div class="form-group">
+            <label>Description</label>
+            <textarea id="resourceDescription" rows="5"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Link URL</label>
+            <input id="resourceLink" type="text" placeholder="https://...">
+          </div>
+
+          <button id="addResourceBtn" class="primary-btn">Add Resource</button>
+
+          <hr>
+
+          <div id="resourcesList"></div>
+        </div>
+      </section>
+
+      <!-- MEDIA -->
+      <section class="admin-section" id="mediaSection">
+        <div class="section-heading">
+          <h2>Media</h2>
+          <p>Add videos, podcasts, interviews and events.</p>
+        </div>
+
+        <div class="admin-card">
+          <div class="form-group">
+            <label>Media Title</label>
+            <input id="mediaTitle" type="text" placeholder="Career Architecture Masterclass">
+          </div>
+
+          <div class="form-group">
+            <label>Media Type</label>
+            <input id="mediaType" type="text" placeholder="Video / Podcast / Interview">
+          </div>
+
+          <div class="form-group">
+            <label>Description</label>
+            <textarea id="mediaDescription" rows="5"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Link URL</label>
+            <input id="mediaLink" type="text" placeholder="https://...">
+          </div>
+
+          <button id="addMediaBtn" class="primary-btn">Add Media</button>
+
+          <hr>
+
+          <div id="mediaList"></div>
+        </div>
+      </section>
+
+    </main>
+  </section>
+
+  <div class="toast" id="toast">Saved successfully</div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
