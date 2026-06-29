@@ -43,6 +43,7 @@
 
     <!-- SIDEBAR -->
     <aside class="admin-sidebar">
+      <button class="nav-item" data-section="homepageSection">Homepage</button>
       <div class="sidebar-logo">
         <h2>OppARC</h2>
         <p>Admin Panel</p>
@@ -80,6 +81,61 @@
       </header>
 
       <!-- DASHBOARD SECTION -->
+      <section class="admin-section" id="homepageSection">
+  <div class="section-heading">
+    <h2>Homepage Editor</h2>
+    <p>Edit homepage content.</p>
+  </div>
+
+  <div class="admin-card">
+    <div class="form-group">
+      <label>Hero Title</label>
+      <textarea id="hpHeroTitle" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Hero Subtitle</label>
+      <textarea id="hpHeroSubtitle" rows="4"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Hero Image URL</label>
+      <input id="hpHeroImage" type="text">
+    </div>
+
+    <div class="form-group">
+      <label>Founder Name</label>
+      <input id="hpFounderName" type="text">
+    </div>
+
+    <div class="form-group">
+      <label>Founder Description</label>
+      <textarea id="hpFounderDescription" rows="4"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Founder Image URL</label>
+      <input id="hpFounderImage" type="text">
+    </div>
+
+    <div class="form-group">
+      <label>Footer Company</label>
+      <input id="hpFooterCompany" type="text">
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input id="hpEmail" type="email">
+    </div>
+
+    <div class="form-group">
+      <label>Phone</label>
+      <input id="hpPhone" type="text">
+    </div>
+
+    <button id="saveHomepageBtn" class="primary-btn">Save Homepage</button>
+  </div>
+</section>
       <section class="admin-section active-section" id="dashboardSection">
         <div class="section-heading">
           <h2>Dashboard Overview</h2>
