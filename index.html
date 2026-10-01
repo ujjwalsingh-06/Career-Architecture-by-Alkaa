@@ -2,91 +2,116 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07131C">
 <title>OPPARC — Career Architecture</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container nav">
-    <a class="logo" href="index.html">
+    <a class="logo" href="#top" aria-label="OPPARC home">
       OPP<span>A</span>RC
       <small>Architecting Opportunities.<br>Transforming Leadership.</small>
     </a>
-    <a class="top-cta" href="resources.html">Take the Career<br>Market Diagnostic <b>→</b></a>
-    <nav class="navlinks">
-      <a href="index.html" class="active">Architecture</a>
+    <div class="nav-actions">
+      <a class="top-cta" href="resources.html">Take the Career Market Diagnostic <b>→</b></a>
+      <button class="menu" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="navlinks" aria-label="Primary navigation">
+      <a href="#architecture">Architecture</a>
       <a href="resources.html">Diagnostic</a>
       <a href="solutions.html">Solutions</a>
       <a href="about.html">The Architect</a>
       <a href="success-stories.html">Proof of Impact</a>
       <a href="media.html">Opportunity Lab</a>
     </nav>
-    <button class="menu" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<main>
+<main id="top">
 <section class="hero">
   <div class="hero-inner container">
-    <div class="hero-copy">
+    <div class="hero-copy reveal">
       <p class="eyebrow">THE OPPARC ARCHITECTURE <i></i></p>
-      <h1>A career can be<br>strong and still be<br><span>poorly positioned.</span></h1>
-      <p class="hero-description">Experience, skills and achievements<br class="desktop"> are important. But they are not enough.<br class="desktop"> Opportunity is created when capability,<br class="desktop"> positioning, perception, access and<br class="desktop"> execution move in alignment.</p>
+      <h1>A career can be strong and still be <span>poorly positioned.</span></h1>
+      <p class="hero-description">Experience, skills and achievements are important. But they are not enough. Opportunity is created when capability, positioning, perception, access and execution move in alignment.</p>
     </div>
-    <div class="hero-side">
-      <div>FIVE MOVEMENTS.<br>ONE ARCHITECTURE<br>FOR MARKET<br>OPPORTUNITY.</div>
+    <div class="hero-side reveal">
+      <span>FIVE MOVEMENTS.</span>
+      <span>ONE ARCHITECTURE</span>
+      <span>FOR MARKET</span>
+      <strong>OPPORTUNITY.</strong>
     </div>
   </div>
 </section>
 
-<section class="architecture section">
+<section class="architecture section" id="architecture">
   <div class="container">
-    <h2>The OPPARC Architecture</h2>
-    <p class="lead">A structured approach to move from career uncertainty<br class="desktop"> to market opportunity.</p>
+    <div class="section-intro reveal">
+      <h2>The OPPARC Architecture</h2>
+      <p class="lead">A structured approach to move from career uncertainty to market opportunity.</p>
+    </div>
 
     <div class="five-steps">
-      <div class="arch-step">
-        <div class="round-icon">⌕</div><span class="arrow">›</span>
-        <b>01</b><h3>Diagnose</h3><p>Identify the real<br>constraint.</p>
-      </div>
-      <div class="arch-step">
-        <div class="round-icon">◎</div><span class="arrow">›</span>
-        <b>02</b><h3>Position</h3><p>Define your<br>market proposition.</p>
-      </div>
-      <div class="arch-step">
-        <div class="round-icon">↗</div><span class="arrow">›</span>
-        <b>03</b><h3>Activate</h3><p>Take it to the<br>right market.</p>
-      </div>
-      <div class="arch-step">
-        <div class="round-icon">♟</div><span class="arrow">›</span>
-        <b>04</b><h3>Connect</h3><p>Build strategic<br>access.</p>
-      </div>
-      <div class="arch-step last">
-        <div class="round-icon">↗</div>
-        <b>05</b><h3>Execute</h3><p>Convert access<br>into opportunity.</p>
-      </div>
+      <article class="arch-step reveal">
+        <div class="round-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><circle cx="21" cy="21" r="9"></circle><path d="m28 28 8 8M15 30l8-8"></path></svg>
+        </div>
+        <b>01</b><h3>Diagnose</h3><p>Identify the real constraint.</p>
+      </article>
+      <article class="arch-step reveal">
+        <div class="round-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="15"></circle><circle cx="24" cy="24" r="9"></circle><circle cx="24" cy="24" r="3"></circle></svg>
+        </div>
+        <b>02</b><h3>Position</h3><p>Define your market proposition.</p>
+      </article>
+      <article class="arch-step reveal">
+        <div class="round-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M11 35 34 12"></path><path d="M24 12h10v10"></path><path d="M10 39h28"></path></svg>
+        </div>
+        <b>03</b><h3>Activate</h3><p>Take it to the right market.</p>
+      </article>
+      <article class="arch-step reveal">
+        <div class="round-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="16" r="6"></circle><circle cx="13" cy="32" r="5"></circle><circle cx="35" cy="32" r="5"></circle><path d="M20 21 15 28M28 21l5 7"></path></svg>
+        </div>
+        <b>04</b><h3>Connect</h3><p>Build strategic access.</p>
+      </article>
+      <article class="arch-step last reveal">
+        <div class="round-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M10 36 20 26l7 6 11-16"></path><path d="M30 16h8v8"></path></svg>
+        </div>
+        <b>05</b><h3>Execute</h3><p>Convert access into opportunity.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="pace">
-  <div class="container">
-    <div class="pace-top">
-      <div class="pace-copy">
-        <h2>PACE<sup>™</sup></h2>
-        <h4>The Opportunity Activation System</h4>
-        <p>PACE is the operating system within the<br>OPPARC architecture. It translates<br>your positioning into market access<br>and meaningful opportunity.</p>
-        <a class="gold-btn" href="resources.html">Explore PACE™ →</a>
+<section class="pace reveal">
+  <div class="pace-inner">
+    <div class="pace-copy">
+      <p class="pace-kicker">OPPARC SYSTEM</p>
+      <h2>PACE<sup>™</sup></h2>
+      <h4>The Opportunity Activation System</h4>
+      <p>PACE is the operating system within the OPPARC architecture. It translates your positioning into market access and meaningful opportunity.</p>
+      <a class="gold-btn" href="resources.html">Explore PACE™ <span>→</span></a>
+    </div>
+
+    <div class="pace-diagram" aria-label="PACE alignment diagram">
+      <div class="flow flow-left">
+        <span>Capability</span><span>Positioning</span><span>Perception</span><span>Access</span><span>Execution</span>
       </div>
-      <div class="pace-diagram">
-        <div class="flow-left"><span>Capability</span><span>Positioning</span><span>Perception</span><span>Access</span><span>Execution</span></div>
-        <div class="tangle">〰〰<br>〰〰<br>〰〰<br>〰〰<br>〰〰</div>
-        <div class="flow-arrow">›</div>
-        <div class="flow-right"><span>Capability</span><span>Positioning</span><span>Perception</span><span>Access</span><span>Opportunity</span></div>
-        <div class="diagram-notes"><span>When these elements are<br>disconnected, careers stall.</span><span>When they are aligned,<br>opportunity accelerates.</span></div>
+      <div class="tangle" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="flow-arrow" aria-hidden="true">›</div>
+      <div class="flow flow-right">
+        <span>Capability</span><span>Positioning</span><span>Perception</span><span>Access</span><span>Opportunity</span>
       </div>
+      <div class="diagram-notes"><span>When these elements are<br>disconnected, careers stall.</span><span>When they are aligned,<br>opportunity accelerates.</span></div>
     </div>
 
     <div class="principle-strip">
@@ -103,8 +128,8 @@
 
 <section class="principle-banner section">
   <div class="container">
-    <div class="principle-card">
-      <div>
+    <div class="principle-card reveal">
+      <div class="principle-copy">
         <h2>The OPPARC Principle</h2>
         <div class="principle-list">
           <p><b>Capability</b><span>›</span><em>gets you considered.</em></p>
@@ -113,31 +138,34 @@
           <p><b>Execution</b><span>›</span><em>gets you converted.</em></p>
         </div>
       </div>
-      <div class="principle-image"></div>
+      <div class="principle-image" role="img" aria-label="Mountain landscape at sunrise"></div>
     </div>
   </div>
 </section>
 
 <section class="market section">
   <div class="container">
-    <h2>How OPPARC Thinks About the Career Market</h2>
-    <div class="market-grid">
-      <div><div class="market-icon">♟</div><p>Opportunity often<br>moves before a job<br>description exists.</p></div>
-      <div><div class="market-icon">♟</div><p>Relevance is<br>more important<br>than tenure.</p></div>
-      <div><div class="market-icon">◇</div><p>Positioning drives<br>perception, and<br>perception drives access.</p></div>
-      <div><div class="market-icon">⚙</div><p>Strategic relationships<br>open doors that<br>applications cannot.</p></div>
+    <div class="market-heading reveal">
+      <h2>How OPPARC Thinks About the Career Market</h2>
     </div>
-    <div class="quote-box">“A career is not a sequence of roles. It is a system of<br class="desktop"> relevance, access and opportunity.”</div>
+    <div class="market-grid">
+      <div class="reveal"><div class="market-icon">01</div><p>Opportunity often moves before a job description exists.</p></div>
+      <div class="reveal"><div class="market-icon">02</div><p>Relevance is more important than tenure.</p></div>
+      <div class="reveal"><div class="market-icon">03</div><p>Positioning drives perception, and perception drives access.</p></div>
+      <div class="reveal"><div class="market-icon">04</div><p>Strategic relationships open doors that applications cannot.</p></div>
+    </div>
+    <div class="quote-box reveal">“A career is not a sequence of roles. It is a system of relevance, access and opportunity.”</div>
   </div>
 </section>
 
 <section class="final-cta">
-  <div class="container">
-    <h2>Find the friction before you search<br>for the next role.</h2>
-    <p>Take the Career Market Diagnostic and understand<br>where you stand — and what will move the needle.</p>
-    <div>
-      <a class="gold-btn wide" href="resources.html">Take the Career Market Diagnostic →</a>
-      <a class="outline-btn wide" href="solutions.html">Explore Solutions →</a>
+  <div class="container reveal">
+    <p class="eyebrow">THE NEXT MOVE</p>
+    <h2>Find the friction before you search for the next role.</h2>
+    <p>Take the Career Market Diagnostic and understand where you stand — and what will move the needle.</p>
+    <div class="cta-actions">
+      <a class="gold-btn wide" href="resources.html">Take the Career Market Diagnostic <span>→</span></a>
+      <a class="outline-btn wide" href="solutions.html">Explore Solutions <span>→</span></a>
     </div>
   </div>
 </section>
