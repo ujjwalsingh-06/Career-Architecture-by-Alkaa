@@ -17,6 +17,14 @@ body{-webkit-font-smoothing:antialiased;background:#0e1218;color:#1a1a1a;overflo
 .hide-scrollbar::-webkit-scrollbar{display:none}.hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
 </style>
 <link rel="stylesheet" href="css/opparc-menu.css">
+<style id="desktop-responsive">
+@media (min-width:1024px){
+main.max-w-\[390px\]{max-width:1180px!important}
+main.max-w-\[390px\] section{padding-left:64px!important;padding-right:64px!important}
+main.max-w-\[390px\] section:nth-of-type(1) .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+main.max-w-\[390px\] .overflow-x-auto{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible}
+}
+</style>
 </head>
 <body class="font-sans">
 <header class="opparc-site-header">
