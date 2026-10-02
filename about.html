@@ -1,5 +1,44 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Architect | OPPARC</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/opparc-menu.css">
-</head><body><header class="opparc-site-header">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THE ARCHITECT | OPPARC</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/opparc-menu.css"/>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          charcoal:'#0d0f12', cardDark:'#13161a', amber:'#c9933e', amberLight:'#dfab55',
+          amberMuted:'#b5832a', cream:'#f9f9f7', creamMuted:'#f2f1ec',
+          borderDark:'#232830', borderGold:'rgba(201,147,62,0.35)'
+        }
+      },
+      fontFamily: {
+        serif:['"Cormorant Garamond"','serif'],
+        sans:['"Plus Jakarta Sans"','sans-serif'],
+        script:['"Alex Brush"','cursive']
+      }
+    }
+  }
+}
+</script>
+<style>
+html,body{margin:0}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-thumb{background:#c9933e;border-radius:4px}
+.gold-gradient-text{background:linear-gradient(135deg,#dfab55 0%,#c9933e 50%,#9e6f21 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.gold-border-glow{box-shadow:0 0 15px -3px rgba(201,147,62,.15)}
+</style>
+</head>
+<body class="bg-brand-charcoal text-slate-200 font-sans antialiased selection:bg-brand-amber selection:text-white">
+<header class="opparc-site-header">
   <div class="opparc-header-inner">
     <a class="opparc-brand" href="index.html" aria-label="OPPARC home">
       <span class="opparc-brand-mark">OP<span class="gold">P</span>ARC</span>
@@ -13,20 +52,109 @@
   <nav id="opparc-menu" class="opparc-menu-panel" aria-label="Primary navigation">
     <div class="opparc-menu-inner">
       <div class="opparc-menu-grid">
-  <a class="opparc-menu-link" href="index.html#architecture"><span>Architecture</span><span class="arrow">→</span></a>
-  <a class="opparc-menu-link" href="resources.html"><span>Diagnostic</span><span class="arrow">→</span></a>
-  <a class="opparc-menu-link" href="solutions.html"><span>Solutions</span><span class="arrow">→</span></a>
-  <a class="opparc-menu-link" href="about.html"><span>The Architect</span><span class="arrow">→</span></a>
-  <a class="opparc-menu-link" href="success-stories.html"><span>Proof of Impact</span><span class="arrow">→</span></a>
-  <a class="opparc-menu-link" href="media.html"><span>Opportunity Lab</span><span class="arrow">→</span></a>
-</div>
+        <a class="opparc-menu-link" href="index.html#architecture"><span>Architecture</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="resources.html"><span>Diagnostic</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="solutions.html"><span>Solutions</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="about.html"><span>The Architect</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="success-stories.html"><span>Proof of Impact</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="media.html"><span>Opportunity Lab</span><span class="arrow">→</span></a>
+      </div>
       <p class="opparc-menu-note">OPPARC · Architecting Opportunities. Transforming Leadership.</p>
     </div>
   </nav>
 </header>
-<section class="pagehero" style="--bg:url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2200&q=85')"><div class="container pagehero-inner"><p class="eyebrow">THE ARCHITECT</p><h1>Two decades on the hiring side changed how I see <span class="gold">careers.</span></h1><p>OPPARC is built on 22+ years of experience across Recruitment, Talent Acquisition, Executive Search, Leadership Hiring and Talent Advisory.</p></div></section>
-<section class="section"><div class="container profile"><div><p class="kicker">WHY OPPARC EXISTS</p><h2>I have seen how organisations evaluate talent.</h2><p>How recruiters shortlist. How executive search firms identify leaders. How hiring decisions are made.</p><p>One pattern kept repeating — many capable professionals remain invisible to the market. Not because they lack experience, but because their experience is not always translated into market relevance.</p><h3 style="font:600 36px var(--serif);color:var(--gold)">OPPARC exists to bridge that gap.</h3></div><div class="feature-img" style="background-image:url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=85')"></div></div></section>
-<section class="section alt"><div class="container"><div class="section-head"><div><p class="kicker">THE ALKAA LENS</p><h2>Careers are best understood from multiple sides of the market.</h2></div></div><div class="grid5"><div class="card"><div class="icon">1</div><h3>Recruitment</h3><p>How talent gets shortlisted.</p></div><div class="card"><div class="icon">2</div><h3>Executive</h3><p>How leadership opportunities are identified.</p></div><div class="card"><div class="icon">3</div><h3>Talent</h3><p>What organisations actually need.</p></div><div class="card"><div class="icon">4</div><h3>Market</h3><p>Where demand is moving.</p></div><div class="card"><div class="icon">5</div><h3>Career</h3><p>How professional value can be repositioned.</p></div><div class="card"><div class="icon">6</div><h3>Opportunity</h3><p>How relevance becomes access.</p></div></div></div></section>
-<section class="quote"><p>“A strong career is not just about what you have done. It is about how the market understands, values and can access what you can do.”</p><small>ALKAA SRIVASTAVA</small></section>
-<section class="section dark"><div class="container"><div class="grid4"><div class="card" style="background:transparent;border-color:#33414a;color:white;text-align:center"><h3 style="font:600 30px var(--serif);color:#d9a34a">22+ Years of Experience</h3></div><div class="card" style="background:transparent;border-color:#33414a;color:white;text-align:center"><h3 style="font:600 30px var(--serif);color:#d9a34a">500+ Professionals Guided</h3></div><div class="card" style="background:transparent;border-color:#33414a;color:white;text-align:center"><h3 style="font:600 30px var(--serif);color:#d9a34a">India | Middle East | Europe | Africa</h3></div><div class="card" style="background:transparent;border-color:#33414a;color:white;text-align:center"><h3 style="font:600 30px var(--serif);color:#d9a34a">Strategic Career & Talent Advisor</h3></div></div></div></section><footer class="footer"><div class="container footergrid"><div><h3>OPP<span style="color:#b77a22">A</span>RC</h3><p>Architecting Opportunities. Transforming Leadership.</p></div><div><p>Career Architecture</p><p>Leadership Positioning</p><p>Hidden Market Activation</p><p>Executive Search</p></div><div><p>India &nbsp;|&nbsp; Middle East &nbsp;|&nbsp; Europe &nbsp;|&nbsp; Africa</p><p>Start Your OPPARC Journey →</p></div></div><div class="container copyright">© <span data-year></span> OPPARC. All Rights Reserved.</div></footer><script src="js/main.js"></script><script src="js/opparc-menu.js"></script>
-</body></html>
+
+<div class="w-full flex justify-center">
+<div class="w-full max-w-[420px] bg-brand-charcoal shadow-2xl relative flex flex-col border-x border-[#1e2229]">
+<main class="flex-grow">
+<section class="relative px-5 pt-8 pb-10 overflow-hidden" data-purpose="hero-the-architect">
+<div class="absolute -top-12 right-0 w-64 h-64 bg-brand-amber/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center space-x-2 mb-3"><span class="text-[11px] uppercase tracking-[0.25em] font-medium text-brand-amber">THE ARCHITECT</span><span class="h-[1px] w-10 bg-brand-amber"></span></div>
+<h1 class="text-3xl sm:text-4xl font-serif text-white leading-[1.2] font-normal mb-4">Two decades on the hiring side changed <span class="italic font-serif text-brand-amber">how I see careers.</span></h1>
+<p class="text-xs sm:text-sm text-neutral-300 font-normal leading-relaxed mb-6">OPPARC is built on 22+ years of experience across Recruitment, Talent Acquisition, Executive Search, Leadership Hiring and Talent Advisory.</p>
+
+<div class="relative bg-gradient-to-b from-[#181b22] to-[#111317] border border-brand-borderDark rounded-xl p-4 gold-border-glow mb-6">
+<div class="flex flex-wrap gap-1.5 mb-3.5 pb-2.5 border-b border-[#232731]">
+<span class="text-[9px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded bg-[#1e232c] text-brand-amber border border-brand-borderGold">TALENT</span>
+<span class="text-[9px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded bg-[#1e232c] text-neutral-300 border border-neutral-700">LEADERSHIP</span>
+<span class="text-[9px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded bg-[#1e232c] text-neutral-300 border border-neutral-700">MARKETS</span>
+<span class="text-[9px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded bg-[#1e232c] text-brand-amber border border-brand-borderGold">OPPORTUNITY</span>
+</div>
+<div class="relative overflow-hidden rounded-lg aspect-[4/3] bg-neutral-900 mb-4 border border-[#2d323e]">
+<img alt="Alkaa Srivastav - Career Strategist &amp; Talent Advisor" class="w-full h-full object-cover object-left-top scale-[1.3] translate-x-2 -translate-y-2" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEeGNEvkKpGgSeBCOUEiV6JmSNSDSp2eqK3fWlQrkY_MhrryEojF7hh4AcqrLqt7dAmweLf77_5rFcyQrEzBO8HsSdM8QjKd_DAWbYHXeLSUzM49JtszhMbv2RW9eqnNQ2wPgt6Czd08nBmrTEHdFBbfVlJr0JX_PNHgCtOdl3VNqfa-3V_H-DJ3OE8ggAhyrzhMEIv1DRCPxvHDO9-AZezPmMuyK-vyG5NkcZd2Q-CSrvF2x4t8Oe-VzcBETmlNzq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0d0f12] via-transparent to-transparent opacity-70"></div>
+</div>
+<div class="space-y-1">
+<p class="font-script text-3xl text-brand-amberLight tracking-wide">Alkaa Srivastav</p>
+<div class="text-[10px] uppercase tracking-wider text-neutral-400 font-semibold space-y-0.5">
+<p class="text-neutral-200">CAREER STRATEGIST • CAREER ARCHITECT</p>
+<p class="text-neutral-400">EXECUTIVE SEARCH PARTNER • TALENT ADVISOR</p>
+</div>
+</div>
+</div>
+
+<div class="border-l-2 border-brand-amber pl-3.5 py-1 space-y-2">
+<div class="text-[10.5px] uppercase tracking-widest text-neutral-300 font-medium leading-relaxed">A RECRUITER'S LENS.<br/>A MARKET LENS.<br/>A CAREER ARCHITECTURE LENS.<br/>AN OPPORTUNITY LENS.</div>
+<p class="text-xs uppercase tracking-wider text-brand-amber font-semibold pt-1">DIFFERENT PERSPECTIVES. A CLEARER PATH FORWARD.</p>
+</div>
+</section>
+
+<section class="bg-brand-cream text-neutral-900 py-10 px-5 rounded-t-[28px]">
+<div class="text-center mb-6"><span class="text-[10px] uppercase font-bold tracking-[0.2em] text-brand-amberMuted">Track Record &amp; Authority</span><div class="h-0.5 w-6 bg-brand-amber mx-auto mt-1"></div></div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white p-4 rounded-xl shadow-sm border border-neutral-200/70 flex flex-col justify-between"><div class="w-8 h-8 rounded-full bg-brand-creamMuted flex items-center justify-center mb-2 text-brand-amberMuted"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg></div><div><p class="text-2xl font-serif font-bold text-neutral-900 leading-none">22+</p><p class="text-xs font-semibold text-neutral-800 mt-1">Years of Experience</p><p class="text-[10px] text-neutral-500 mt-0.5 leading-tight">Recruitment | Search | Advisory</p></div></div>
+<div class="bg-white p-4 rounded-xl shadow-sm border border-neutral-200/70 flex flex-col justify-between"><div class="w-8 h-8 rounded-full bg-brand-creamMuted flex items-center justify-center mb-2 text-brand-amberMuted"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg></div><div><p class="text-2xl font-serif font-bold text-neutral-900 leading-none">500+</p><p class="text-xs font-semibold text-neutral-800 mt-1">Professionals Guided</p><p class="text-[10px] text-neutral-500 mt-0.5 leading-tight">Mid-Senior | CXO Aspirants</p></div></div>
+<div class="bg-white p-4 rounded-xl shadow-sm border border-neutral-200/70 flex flex-col justify-between"><div class="w-8 h-8 rounded-full bg-brand-creamMuted flex items-center justify-center mb-2 text-brand-amberMuted"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2.5 2.5 0 012.5 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg></div><div><p class="text-sm font-serif font-bold text-neutral-900 leading-tight">India | Middle East</p><p class="text-xs font-serif font-bold text-neutral-800">Europe | Africa</p><p class="text-[10px] text-neutral-500 mt-1 leading-tight">Professional Relationships</p></div></div>
+<div class="bg-white p-4 rounded-xl shadow-sm border border-neutral-200/70 flex flex-col justify-between"><div class="w-8 h-8 rounded-full bg-brand-creamMuted flex items-center justify-center mb-2 text-brand-amberMuted"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10a6 6 0 100-12 6 6 0 000 12zm0 4a10 10 0 100-20 10 10 0 000 20z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg></div><div><p class="text-xl font-serif font-bold text-neutral-900 leading-tight">Strategic</p><p class="text-xs font-semibold text-neutral-800 mt-0.5">Career &amp; Talent Advisor</p><p class="text-[10px] text-neutral-500 mt-0.5 leading-tight">Leaders &amp; Organisations</p></div></div>
+</div>
+</section>
+
+<section class="bg-brand-cream text-neutral-800 px-5 pb-10 border-t border-neutral-200/50">
+<div class="flex items-center space-x-2 pt-6 mb-3"><h2 class="font-serif text-2xl font-bold text-neutral-900">Why OPPARC exists</h2><span class="h-[1.5px] w-8 bg-brand-amberMuted"></span></div>
+<div class="space-y-3.5 text-xs sm:text-sm text-neutral-700 leading-relaxed font-normal"><p>I have seen how organisations evaluate talent. How recruiters shortlist. How executive search firms identify leaders. How hiring decisions are made.</p><p>One pattern kept repeating – many capable professionals remain invisible to the market. Not because they lack experience, but because their experience is not always translated into market relevance.</p></div>
+<div class="mt-5 pt-3 border-t border-neutral-300"><p class="font-serif text-xl sm:text-2xl font-semibold text-brand-amberMuted">OPPARC exists to bridge that gap.</p><div class="h-0.5 w-10 bg-brand-amberMuted mt-1"></div></div>
+</section>
+
+<section class="bg-[#12151a] px-5 py-10 border-t border-brand-borderDark">
+<div class="mb-6"><div class="flex items-center space-x-2"><h2 class="font-serif text-2xl font-normal text-white">The Alkaa Lens</h2><span class="h-[1px] w-8 bg-brand-amber"></span></div><p class="text-xs text-neutral-400 mt-1">Careers are best understood from multiple sides of the market.</p></div>
+<div class="grid grid-cols-2 gap-3 mb-8">
+<div class="bg-brand-cardDark p-3.5 rounded-xl border border-[#232733] flex flex-col items-center text-center"><div class="w-10 h-10 rounded-full bg-brand-creamMuted/10 flex items-center justify-center text-brand-amber mb-2.5"><span class="font-serif text-lg font-semibold">1</span></div><h3 class="text-sm font-serif font-semibold text-white">Recruitment</h3><p class="text-[11px] text-neutral-400 mt-1 leading-snug">How talent gets shortlisted.</p></div><div class="bg-brand-cardDark p-3.5 rounded-xl border border-[#232733] flex flex-col items-center text-center"><div class="w-10 h-10 rounded-full bg-brand-creamMuted/10 flex items-center justify-center text-brand-amber mb-2.5"><span class="font-serif text-lg font-semibold">2</span></div><h3 class="text-sm font-serif font-semibold text-white">Executive</h3><p class="text-[11px] text-neutral-400 mt-1 leading-snug">How leadership opportunities are identified.</p></div><div class="bg-brand-cardDark p-3.5 rounded-xl border border-[#232733] flex flex-col items-center text-center"><div class="w-10 h-10 rounded-full bg-brand-creamMuted/10 flex items-center justify-center text-brand-amber mb-2.5"><span class="font-serif text-lg font-semibold">3</span></div><h3 class="text-sm font-serif font-semibold text-white">Talent</h3><p class="text-[11px] text-neutral-400 mt-1 leading-snug">What organisations actually need.</p></div><div class="bg-brand-cardDark p-3.5 rounded-xl border border-[#232733] flex flex-col items-center text-center"><div class="w-10 h-10 rounded-full bg-brand-creamMuted/10 flex items-center justify-center text-brand-amber mb-2.5"><span class="font-serif text-lg font-semibold">4</span></div><h3 class="text-sm font-serif font-semibold text-white">Market</h3><p class="text-[11px] text-neutral-400 mt-1 leading-snug">Where demand is moving.</p></div><div class="bg-brand-cardDark p-3.5 rounded-xl border border-[#232733] flex flex-col items-center text-center"><div class="w-10 h-10 rounded-full bg-brand-creamMuted/10 flex items-center justify-center text-brand-amber mb-2.5"><span class="font-serif text-lg font-semibold">5</span></div><h3 class="text-sm font-serif font-semibold text-white">Career</h3><p class="text-[11px] text-neutral-400 mt-1 leading-snug">How professional value can be repositioned.</p></div><div class="bg-brand-cardDark p-3.5 rounded-xl border border-[#232733] flex flex-col items-center text-center"><div class="w-10 h-10 rounded-full bg-brand-creamMuted/10 flex items-center justify-center text-brand-amber mb-2.5"><span class="font-serif text-lg font-semibold">6</span></div><h3 class="text-sm font-serif font-semibold text-white">Opportunity</h3><p class="text-[11px] text-neutral-400 mt-1 leading-snug">How relevance becomes access.</p></div>
+</div>
+<div class="relative bg-gradient-to-br from-[#1b1f28] to-[#0f1115] border border-brand-borderGold p-5 rounded-2xl overflow-hidden">
+<span class="font-serif text-5xl text-brand-amber/80 leading-none select-none block -mb-3">“</span>
+<blockquote class="font-serif italic text-base sm:text-lg text-neutral-100 font-medium leading-snug mb-4">A strong career is not just about what you have done. It is about how the market understands, values and can access what you can do.</blockquote>
+<div class="pt-3 border-t border-brand-borderDark flex items-center justify-between"><div><p class="text-xs uppercase tracking-widest font-semibold text-brand-amberLight">ALKAA SRIVASTAV</p><p class="text-[9px] uppercase tracking-wider text-neutral-400">Founder &amp; Managing Partner</p></div><div class="w-8 h-8 rounded-full bg-brand-amber/10 flex items-center justify-center text-brand-amber">✎</div></div>
+</div>
+</section>
+
+<section class="bg-brand-cream text-neutral-900 px-5 py-10">
+<div class="text-center mb-6"><div class="flex items-center justify-center space-x-2"><h2 class="font-serif text-2xl font-bold text-neutral-900">How this perspective helps</h2><span class="h-[1.5px] w-6 bg-brand-amberMuted"></span></div><p class="text-xs text-neutral-500 mt-1">Direct outcomes of architected positioning</p></div>
+<div class="grid grid-cols-2 gap-3.5">
+<div class="bg-white p-3.5 rounded-xl border border-neutral-200/80 shadow-sm flex flex-col"><div class="w-8 h-8 rounded-full bg-brand-creamMuted flex items-center justify-center text-brand-amberMuted mb-2"><span class="font-serif font-bold">1</span></div><h4 class="font-serif font-bold text-xs sm:text-sm text-neutral-900">Stronger Positioning</h4><p class="text-[11px] text-neutral-600 mt-1 leading-tight">Be known for the right value.</p></div><div class="bg-white p-3.5 rounded-xl border border-neutral-200/80 shadow-sm flex flex-col"><div class="w-8 h-8 rounded-full bg-brand-creamMuted flex items-center justify-center text-brand-amberMuted mb-2"><span class="font-serif font-bold">2</span></div><h4 class="font-serif font-bold text-xs sm:text-sm text-neutral-900">Broader Access</h4><p class="text-[11px] text-neutral-600 mt-1 leading-tight">Reach the people who open doors.</p></div><div class="bg-white p-3.5 rounded-xl border border-neutral-200/80 shadow-sm flex flex-col"><div class="w-8 h-8 rounded-full bg-brand-creamMuted flex items-center justify-center text-brand-amberMuted mb-2"><span class="font-serif font-bold">3</span></div><h4 class="font-serif font-bold text-xs sm:text-sm text-neutral-900">Smarter Decisions</h4><p class="text-[11px] text-neutral-600 mt-1 leading-tight">Align with real market demand.</p></div><div class="bg-white p-3.5 rounded-xl border border-neutral-200/80 shadow-sm flex flex-col"><div class="w-8 h-8 rounded-full bg-brand-creamMuted flex items-center justify-center text-brand-amberMuted mb-2"><span class="font-serif font-bold">4</span></div><h4 class="font-serif font-bold text-xs sm:text-sm text-neutral-900">Meaningful Opportunity</h4><p class="text-[11px] text-neutral-600 mt-1 leading-tight">Move from visibility to conversion.</p></div>
+</div>
+</section>
+
+<section class="bg-[#0f1217] px-5 py-10 border-t border-brand-borderDark">
+<div class="mb-4"><h2 class="font-serif text-2xl text-white font-normal">Global reach. Consistent principles.</h2><p class="text-xs text-neutral-400 mt-1">Different geographies. The same career-market dynamics.</p><div class="h-0.5 w-8 bg-brand-amber mt-2"></div></div>
+<div class="grid grid-cols-2 gap-2.5 my-5">
+<div class="flex items-center space-x-2 bg-[#171b22] px-3 py-2.5 rounded-lg border border-brand-borderDark"><span class="text-brand-amber">●</span><span class="text-xs font-medium text-neutral-200">India</span></div><div class="flex items-center space-x-2 bg-[#171b22] px-3 py-2.5 rounded-lg border border-brand-borderDark"><span class="text-brand-amber">●</span><span class="text-xs font-medium text-neutral-200">Middle East</span></div><div class="flex items-center space-x-2 bg-[#171b22] px-3 py-2.5 rounded-lg border border-brand-borderDark"><span class="text-brand-amber">●</span><span class="text-xs font-medium text-neutral-200">Europe</span></div><div class="flex items-center space-x-2 bg-[#171b22] px-3 py-2.5 rounded-lg border border-brand-borderDark"><span class="text-brand-amber">●</span><span class="text-xs font-medium text-neutral-200">Africa</span></div>
+</div>
+<div class="relative bg-[#151820] rounded-xl p-4 border border-[#232833] overflow-hidden text-center"><div class="py-6 flex flex-col items-center justify-center"><div class="relative w-48 h-24 flex items-center justify-center"><div class="absolute inset-0 border border-brand-borderDark border-dashed rounded-full animate-pulse opacity-40"></div><div class="absolute w-32 h-16 border border-brand-borderGold rounded-full opacity-60"></div><div class="flex items-center space-x-6 text-brand-amber"><div class="flex flex-col items-center"><span class="w-2.5 h-2.5 rounded-full bg-brand-amber animate-ping"></span><span class="text-[9px] text-neutral-300 mt-1 uppercase tracking-tighter">EMEA</span></div><div class="flex flex-col items-center"><span class="w-3 h-3 rounded-full bg-brand-amberLight ring-2 ring-brand-amber"></span><span class="text-[10px] font-bold text-white mt-1 uppercase tracking-tight">INDIA &amp; ME</span></div><div class="flex flex-col items-center"><span class="w-2 h-2 rounded-full bg-brand-amber"></span><span class="text-[9px] text-neutral-300 mt-1 uppercase tracking-tighter">GLOBAL</span></div></div></div><p class="text-[11px] text-neutral-400 mt-2 font-light">Cross-Border Leadership Advisory &amp; Market Search</p></div></div>
+</section>
+
+<section class="bg-gradient-to-t from-black via-[#111317] to-[#161a22] px-5 py-10 border-t border-brand-borderDark text-center">
+<h3 class="font-serif text-2xl text-white font-normal leading-snug mb-2">Experience <span class="italic text-brand-amber">the market lens</span> your career needs.</h3>
+<p class="text-xs text-neutral-400 max-w-xs mx-auto mb-6">A career perspective built by experience. And the market.</p>
+<a class="w-full inline-flex items-center justify-center py-3.5 px-6 rounded-lg bg-gradient-to-r from-brand-amber to-brand-amberLight text-neutral-950 font-bold text-sm tracking-wide shadow-lg shadow-brand-amber/20 transition-all duration-300" href="resources.html"><span>Start Your OPPARC Journey</span><span class="ml-2">→</span></a>
+</section>
+</main>
+<footer class="bg-[#090b0d] border-t border-[#181b20] py-6 px-5 text-center text-neutral-500">
+<div class="flex flex-col items-center space-y-2"><p class="font-serif text-sm tracking-widest text-neutral-300 font-semibold uppercase">OPPARC</p><p class="text-[9px] uppercase tracking-wider text-neutral-400">ARCHITECTING OPPORTUNITIES. TRANSFORMING LEADERSHIP.</p><p class="text-[9px] text-neutral-600 pt-3">OPPARC © <span data-year>2026</span>. ALL RIGHTS RESERVED.</p></div>
+</footer>
+</div>
+</div>
+<script src="js/main.js"></script>
+<script src="js/opparc-menu.js"></script>
+<script>document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());</script>
+</body>
+</html>
