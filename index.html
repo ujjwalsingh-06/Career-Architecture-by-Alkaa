@@ -16,26 +16,36 @@ tailwind.config={theme:{extend:{colors:{brand:{charcoal:"#0d1015",dark:"#14171f"
 <style>
 html{scroll-behavior:smooth}body{font-family:Inter,sans-serif;background:#f9f8f6;color:#1a1a1a;-webkit-font-smoothing:antialiased;overflow-x:hidden}.serif{font-family:"Playfair Display",Georgia,serif}.gold-line{background:#c59b27}.hero-overlay{background:linear-gradient(180deg,rgba(13,16,21,.78),rgba(13,16,21,.94) 72%,#0d1015)}.card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}.card:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(13,16,21,.08);border-color:rgba(197,155,39,.45)}.reveal{animation:rise .7s ease both}@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}@media(min-width:768px){main{max-width:1180px!important;margin:auto;box-shadow:0 0 60px rgba(0,0,0,.08)}header>div,header>nav{max-width:1180px;margin:auto}.hero-content{max-width:760px}.architecture-grid{grid-template-columns:repeat(5,1fr)!important}.market-grid{grid-template-columns:repeat(2,1fr)!important}.principle-grid{grid-template-columns:1fr 1fr!important}}
 </style>
+<link rel="stylesheet" href="css/opparc-menu.css">
 </head>
 <body class="bg-[#f9f8f6] text-neutral-800">
-<header class="sticky top-0 z-50 bg-white border-b border-neutral-200">
-<div class="px-4 py-3.5 flex items-center justify-between min-h-[72px]">
-<a href="#top" class="flex flex-col leading-none" aria-label="OPPARC home">
-<span class="serif text-2xl font-bold tracking-tight text-[#111318]">OP<span class="text-brand-gold">P</span>ARC</span>
-<span class="mt-0.5 text-[9px] tracking-widest text-[#6f737b] font-medium whitespace-nowrap">Architecting Opportunities. Transforming Leadership.</span>
-</a>
-<button id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" class="w-10 h-10 rounded-lg bg-white border border-neutral-300 flex flex-col items-center justify-center gap-1.5">
-<span class="w-5 h-0.5 bg-[#111318]"></span><span class="w-5 h-0.5 bg-brand-gold"></span><span class="w-3.5 h-0.5 bg-[#111318] self-start ml-2.5"></span>
-</button>
-</div>
-<nav id="mobile-menu" class="hidden px-4 pb-4 flex-col gap-1 border-t border-[#262b37]">
-<a href="#architecture" class="text-sm text-brand-gold py-2 px-3 rounded hover:bg-[#1a1e27]">Architecture</a>
-<a href="#pace" class="text-sm text-neutral-300 py-2 px-3 rounded hover:bg-[#1a1e27]">PACE™</a>
-<a href="#market" class="text-sm text-neutral-300 py-2 px-3 rounded hover:bg-[#1a1e27]">Career Market</a>
-<a href="about.html" class="text-sm text-neutral-300 py-2 px-3 rounded hover:bg-[#1a1e27]">The Architect</a>
-<a href="solutions.html" class="text-sm text-neutral-300 py-2 px-3 rounded hover:bg-[#1a1e27]">Solutions</a>
-<a href="resources.html" class="mt-2 text-center bg-brand-gold text-[#0d1015] font-semibold text-xs tracking-wider uppercase py-3 rounded-md">Take the Career Market Diagnostic →</a>
-</nav>
+<header class="opparc-site-header">
+  <div class="opparc-header-inner">
+    <a class="opparc-brand" href="index.html" aria-label="OPPARC home">
+      <span class="opparc-brand-mark">OP<span class="gold">P</span>ARC</span>
+      <span class="opparc-brand-tag">Architecting Opportunities. Transforming Leadership.</span>
+    </a>
+    <button class="opparc-menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="opparc-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="opparc-menu-backdrop" aria-hidden="true"></div>
+  <nav id="opparc-menu" class="opparc-menu-panel" aria-label="Primary navigation">
+    <div class="opparc-menu-inner">
+      <div class="opparc-menu-grid">
+        <a class="opparc-menu-link" href="index.html#architecture"><span>Architecture</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="index.html#pace"><span>PACE™</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="index.html#market"><span>Career Market</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="about.html"><span>The Architect</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="solutions.html"><span>Solutions</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="success-stories.html"><span>Proof of Impact</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="media.html"><span>Opportunity Lab</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="resources.html"><span>Career Market Diagnostic</span><span class="arrow">→</span></a>
+      </div>
+      <a class="opparc-menu-cta" href="resources.html"><span>Take the Career Market Diagnostic</span><span>→</span></a>
+      <p class="opparc-menu-note">OPPARC · Architecting Opportunities. Transforming Leadership.</p>
+    </div>
+  </nav>
 </header>
 
 <main id="top" class="w-full overflow-hidden">
@@ -212,11 +222,6 @@ html{scroll-behavior:smooth}body{font-family:Inter,sans-serif;background:#f9f8f6
 </div>
 </section>
 </main>
-<script>
-const button=document.getElementById("menu-toggle"),menu=document.getElementById("mobile-menu");
-button.addEventListener("click",()=>{const open=menu.classList.toggle("hidden");button.setAttribute("aria-expanded",String(!open));});
-menu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>menu.classList.add("hidden")));
-document.getElementById("year").textContent=new Date().getFullYear();
-</script>
+<script src="js/opparc-menu.js"></script>
 </body>
 </html>
