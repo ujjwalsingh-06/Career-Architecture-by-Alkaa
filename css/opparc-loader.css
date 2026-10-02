@@ -1,0 +1,12 @@
+/* OPPARC global entrance loader */
+#opparc-site-loader{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#0e1117;color:#fff;opacity:1;visibility:visible;transition:opacity .65s cubic-bezier(.22,1,.36,1),visibility .65s;pointer-events:all}
+#opparc-site-loader.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+.opparc-loader-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center}
+.opparc-loader-line{width:42px;height:1px;background:#c58a36;margin:0 auto 28px;transform:scaleX(0);transform-origin:center;animation:opparcLoaderLine 1s cubic-bezier(.22,1,.36,1) .05s forwards}
+.opparc-loader-wordmark{font-family:"Playfair Display",Georgia,serif;font-size:clamp(30px,8vw,48px);font-weight:500;letter-spacing:.13em;line-height:1;color:#f7f5ef;white-space:nowrap;min-height:1.1em}
+.opparc-loader-wordmark .gold{color:#c58a36}
+.opparc-loader-sub{margin-top:14px;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.5);min-height:1.4em}
+.opparc-loader-cursor{display:inline-block;width:1px;height:.9em;background:#c58a36;margin-left:5px;vertical-align:-.08em;animation:opparcLoaderBlink .75s steps(1,end) infinite}
+@keyframes opparcLoaderLine{to{transform:scaleX(1)}}
+@keyframes opparcLoaderBlink{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){#opparc-site-loader{transition:none}.opparc-loader-line{animation:none;transform:scaleX(1)}.opparc-loader-cursor{animation:none}}
