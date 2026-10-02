@@ -13,6 +13,17 @@ tailwind.config={theme:{extend:{colors:{brand:{gold:'#C59B27',goldLight:'#E8C15A
 body{-webkit-font-smoothing:antialiased;background:#FBFBFA;color:#101114}
 .opparc-input:focus{border-color:#C59B27!important;box-shadow:0 0 0 3px rgba(197,155,39,.12)!important}
 </style>
+<style id="desktop-responsive">
+@media (min-width:1024px){
+body{align-items:flex-start!important;background:#eef0f3!important}
+body>div.w-full.max-w-\[440px\]{max-width:1180px!important;box-shadow:0 0 50px rgba(0,0,0,.12)}
+body>div.w-full.max-w-\[440px\] main{max-width:1000px;margin:0 auto;padding-left:0!important;padding-right:0!important}
+body>div.w-full.max-w-\[440px\] form{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+body>div.w-full.max-w-\[440px\] form>div:last-of-type{grid-column:1/-1}
+body>div.w-full.max-w-\[440px\] form>button{grid-column:1/-1}
+body>div.w-full.max-w-\[440px\] header{padding-left:56px!important;padding-right:56px!important}
+}
+</style>
 </head>
 <body class="font-sans min-h-screen flex flex-col items-center bg-[#FBFBFA]">
 <div class="w-full max-w-[440px] min-h-screen bg-[#FBFBFA] border-x border-[#EFECE6] flex flex-col relative shadow-2xl">
