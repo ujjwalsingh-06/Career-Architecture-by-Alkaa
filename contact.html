@@ -63,7 +63,36 @@ body{-webkit-font-smoothing:antialiased;background:#FBFBFA;color:#101114}
 <footer class="bg-[#101115] text-[#A6ABB7] px-6 py-8 text-center"><div class="font-serif text-2xl font-bold text-white">OPP<span class="text-[#C59B27]">A</span>RC</div><p class="text-[11px] uppercase tracking-[.18em] text-[#C59B27] font-semibold mt-2">Architecting Opportunities. Transforming Leadership.</p><p class="text-[11px] mt-2">India • Middle East • Europe • Southeast Asia • Africa</p><div class="w-16 h-px bg-[#262833] mx-auto my-4"></div><p class="text-[10px] text-gray-500">© 2026 OPPARC Executive Advisory. All rights reserved.</p></footer>
 </div>
 <script>
-document.getElementById('career-diagnostic-form').addEventListener('submit',function(e){e.preventDefault();alert('Assessment started. We will connect with you shortly.');});
+document.getElementById('career-diagnostic-form').addEventListener('submit',function(e){
+e.preventDefault();
+const form=e.currentTarget;
+const data=new FormData(form);
+const name=data.get('fullName')||'';
+const email=data.get('emailAddress')||'';
+const country=data.get('countryCode')||'';
+const phone=data.get('phone')||'';
+const seniority=data.get('seniority')||'';
+const challenge=data.get('primaryChallenge')||'';
+const subject='OPPARC Career Market Diagnostic — '+name;
+const body=[
+'Hello Alkaa,',
+'',
+'I would like to start the OPPARC Career Market Diagnostic.',
+'',
+'CLIENT DETAILS',
+'Name: '+name,
+'Email: '+email,
+'Phone / WhatsApp: '+country+' '+phone,
+'Current Role / Seniority Level: '+seniority,
+'Primary Career Focus / Challenge: '+challenge,
+'',
+'Please connect with me regarding the diagnostic.',
+'',
+'Regards,',
+name
+].join('\\n');
+window.location.href='mailto:alkaa.mbahr@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+});
 document.getElementById('menu-toggle').addEventListener('click',function(){window.location.href='resources.html';});
 </script>
 </body>
