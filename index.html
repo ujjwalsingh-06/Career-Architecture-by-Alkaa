@@ -12,14 +12,33 @@ tailwind.config={theme:{extend:{colors:{brand:{charcoal:"#0d1015",dark:"#14171f"
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 <style>
 html{scroll-behavior:smooth}body{font-family:Inter,sans-serif;background:#f9f8f6;color:#1a1a1a;-webkit-font-smoothing:antialiased;overflow-x:hidden}.serif{font-family:"Playfair Display",Georgia,serif}.gold-line{background:#c59b27}.hero-overlay{background:linear-gradient(180deg,rgba(13,16,21,.78),rgba(13,16,21,.94) 72%,#0d1015)}.card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}.card:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(13,16,21,.08);border-color:rgba(197,155,39,.45)}.reveal{animation:rise .7s ease both}@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}@media(min-width:768px){main{max-width:1180px!important;margin:auto;box-shadow:0 0 60px rgba(0,0,0,.08)}header>div,header>nav{max-width:1180px;margin:auto}.hero-content{max-width:760px}.architecture-grid{grid-template-columns:repeat(5,1fr)!important}.market-grid{grid-template-columns:repeat(2,1fr)!important}.principle-grid{grid-template-columns:1fr 1fr!important}}
 </style>
 <link rel="stylesheet" href="css/opparc-menu.css">
-<link rel="stylesheet" href="css/opparc-loader.css">
+<link rel="stylesheet" href="css/loader.css">
 </head>
-<body class="bg-[#f9f8f6] text-neutral-800">
+<body class="bg-[#f9f8f6] text-neutral-800 loader-active">
+
+<div class="signature-loader" id="signatureLoader" role="status" aria-label="Loading OPPARC Advisory portal">
+  <div class="signature-bg" aria-hidden="true"></div>
+  <div class="signature-content">
+    <div class="loader-topline"><span><strong>●</strong> Secured Architectural Portal</span><span>Est. 2002 • 22+ Years</span></div>
+    <div class="loader-emblem" aria-hidden="true">
+      <svg class="loader-ring" viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="94"></circle><circle cx="100" cy="100" r="86"></circle><line x1="100" y1="2" x2="100" y2="10"></line><line x1="100" y1="190" x2="100" y2="198"></line><line x1="2" y1="100" x2="10" y2="100"></line><line x1="190" y1="100" x2="198" y2="100"></line></svg>
+      <span class="loader-orbit-dot"></span>
+      <div class="loader-medallion"><svg class="loader-monogram" viewBox="0 0 40 40"><path d="M20 5 27 28H13L20 5Z"></path><path d="M20 20v11M10 30h20"></path><path d="M6 20a14 14 0 0 1 28 0"></path></svg><span>OPPARC</span></div>
+    </div>
+    <h1 class="loader-brand">OPPARC</h1>
+    <p class="loader-byline">by <span>Alka Srivastav</span></p>
+    <p class="loader-subtitle">Architecting Opportunities. Transforming Leadership.</p>
+    <div class="loader-progress-wrap"><div class="loader-progress-track"><div class="loader-progress" id="loaderProgress"></div></div><div class="loader-status"><em id="loadingStep">Initializing architectural framework...</em><strong id="progressCounter">0%</strong></div></div>
+    <div class="loader-pillars" id="pillarsContainer" aria-hidden="true"><span class="loader-pillar" data-pillar="0">Talent</span><span class="loader-pillar" data-pillar="1">Leadership</span><span class="loader-pillar" data-pillar="2">Markets</span><span class="loader-pillar" data-pillar="3">Opportunity</span></div>
+    <div class="loader-footline"><span>Executive Search • Career Architecture • Talent Advisory</span><span>India • Middle East • Europe • Africa</span></div>
+  </div>
+</div>
+
 <header class="opparc-site-header">
   <div class="opparc-header-inner">
     <a class="opparc-brand" href="index.html" aria-label="OPPARC home">
@@ -221,6 +240,6 @@ html{scroll-behavior:smooth}body{font-family:Inter,sans-serif;background:#f9f8f6
 </section>
 </main>
 <script src="js/opparc-menu.js"></script>
-<script src="js/opparc-loader.js"></script>
+<script src="js/loader.js"></script>
 </body>
 </html>
