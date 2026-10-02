@@ -14,20 +14,38 @@ tailwind.config={theme:{extend:{colors:{brand:{gold:"#c58a2b",goldLight:"#e5ad57
 <style>
 body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background:#0e1117;color:#1e293b;font-family:"Plus Jakarta Sans",sans-serif}.serif-heading{font-family:"Playfair Display",Georgia,serif}.font-cinzel{font-family:"Cinzel",serif;letter-spacing:.15em}.hero-glow{background:radial-gradient(circle at 80% 20%,rgba(197,138,43,.22) 0%,rgba(14,17,23,0) 65%)}.bottom-cta-bg{background:linear-gradient(180deg,#11141c 0%,#080a0e 100%)}html{scroll-behavior:smooth}
 </style>
+<link rel="stylesheet" href="css/opparc-menu.css">
 </head>
 <body class="bg-[#0e1117] flex justify-center text-slate-800 antialiased selection:bg-amber-500/30 selection:text-amber-200">
 <div class="w-full max-w-md min-h-screen bg-[#0e1117] text-slate-800 shadow-2xl relative overflow-hidden flex flex-col">
 
-<header class="sticky top-0 z-50 bg-white border-b border-neutral-200">
-<div class="px-4 py-3.5 flex items-center justify-between min-h-[72px]">
-<a href="index.html#top" class="flex flex-col leading-none" aria-label="OPPARC home">
-<span class="serif-heading text-2xl font-bold tracking-tight text-[#111318]">OP<span class="text-[#c59b27]">P</span>ARC</span>
-<span class="mt-0.5 text-[9px] tracking-widest text-[#6f737b] font-medium whitespace-nowrap">Architecting Opportunities. Transforming Leadership.</span>
-</a>
-<button id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" class="w-10 h-10 rounded-lg bg-white border border-neutral-300 flex flex-col items-center justify-center gap-1.5">
-<span class="w-5 h-0.5 bg-[#111318]"></span><span class="w-5 h-0.5 bg-[#c59b27]"></span><span class="w-3.5 h-0.5 bg-[#111318] self-start ml-2.5"></span>
-</button>
-</div>
+<header class="opparc-site-header">
+  <div class="opparc-header-inner">
+    <a class="opparc-brand" href="index.html" aria-label="OPPARC home">
+      <span class="opparc-brand-mark">OP<span class="gold">P</span>ARC</span>
+      <span class="opparc-brand-tag">Architecting Opportunities. Transforming Leadership.</span>
+    </a>
+    <button class="opparc-menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="opparc-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="opparc-menu-backdrop" aria-hidden="true"></div>
+  <nav id="opparc-menu" class="opparc-menu-panel" aria-label="Primary navigation">
+    <div class="opparc-menu-inner">
+      <div class="opparc-menu-grid">
+        <a class="opparc-menu-link" href="index.html#architecture"><span>Architecture</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="index.html#pace"><span>PACE™</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="index.html#market"><span>Career Market</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="about.html"><span>The Architect</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="solutions.html"><span>Solutions</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="success-stories.html"><span>Proof of Impact</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="media.html"><span>Opportunity Lab</span><span class="arrow">→</span></a>
+        <a class="opparc-menu-link" href="resources.html"><span>Career Market Diagnostic</span><span class="arrow">→</span></a>
+      </div>
+      <a class="opparc-menu-cta" href="resources.html"><span>Take the Career Market Diagnostic</span><span>→</span></a>
+      <p class="opparc-menu-note">OPPARC · Architecting Opportunities. Transforming Leadership.</p>
+    </div>
+  </nav>
 </header>
 
 <section class="relative px-5 pt-8 pb-10 text-white hero-glow overflow-hidden border-b border-amber-950/40">
@@ -100,11 +118,7 @@ body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;backgr
 
 <footer class="bg-[#090b0f] border-t border-[#1a1f2c] px-5 py-6 text-center text-slate-500 text-[10px] leading-relaxed"><p class="font-cinzel text-slate-400 font-semibold tracking-wider text-[11px] mb-1">OPPARC © <span id="year"></span>. ALL RIGHTS RESERVED.</p><p class="text-slate-500 text-[9px] uppercase tracking-wider">Architecting Opportunities. Transforming Leadership.</p></footer>
 
-<script>
-const button=document.getElementById("menu-toggle");
-button.addEventListener("click",()=>{button.classList.toggle("bg-[#f4f4f4]");});
-function startDiagnostic(){alert("The Career Market Diagnostic will open here.");}
-document.getElementById("year").textContent=new Date().getFullYear();
-</script>
+<script src="js/opparc-menu.js"></script>
+<script>function startDiagnostic(){alert("The Career Market Diagnostic will open here.");}document.getElementById("year").textContent=new Date().getFullYear();</script>
 </body>
 </html>
