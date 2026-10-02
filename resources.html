@@ -15,6 +15,16 @@ tailwind.config={theme:{extend:{colors:{brand:{gold:"#c58a2b",goldLight:"#e5ad57
 body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background:#0e1117;color:#1e293b;font-family:"Plus Jakarta Sans",sans-serif}.serif-heading{font-family:"Playfair Display",Georgia,serif}.font-cinzel{font-family:"Cinzel",serif;letter-spacing:.15em}.hero-glow{background:radial-gradient(circle at 80% 20%,rgba(197,138,43,.22) 0%,rgba(14,17,23,0) 65%)}.bottom-cta-bg{background:linear-gradient(180deg,#11141c 0%,#080a0e 100%)}html{scroll-behavior:smooth}
 </style>
 <link rel="stylesheet" href="css/opparc-menu.css">
+<style id="desktop-responsive">
+@media (min-width:1024px){
+body{justify-content:center;background:#eef0f3!important}
+body>div.w-full.max-w-md{max-width:1180px!important;box-shadow:0 0 50px rgba(0,0,0,.12)}
+body>div.w-full.max-w-md main{font-size:1.05rem}
+body>div.w-full.max-w-md .grid.grid-cols-2{grid-template-columns:repeat(4,minmax(0,1fr))}
+body>div.w-full.max-w-md .max-w-\[270px\]{max-width:360px}
+body>div.w-full.max-w-md section{padding-left:64px!important;padding-right:64px!important}
+}
+</style>
 </head>
 <body class="bg-[#0e1117] flex justify-center text-slate-800 antialiased selection:bg-amber-500/30 selection:text-amber-200">
 <div class="w-full max-w-md min-h-screen bg-[#0e1117] text-slate-800 shadow-2xl relative overflow-hidden flex flex-col">
