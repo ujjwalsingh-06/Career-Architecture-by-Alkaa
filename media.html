@@ -18,6 +18,16 @@ body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;backgr
 .hide-scrollbar::-webkit-scrollbar{display:none}.hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
 </style>
 <link rel="stylesheet" href="css/opparc-menu.css">
+<style id="desktop-responsive">
+@media (min-width:1024px){
+body>div.w-full{max-width:1180px!important;margin:auto;box-shadow:0 0 50px rgba(0,0,0,.12)}
+body>div.w-full main{max-width:none!important}
+body>div.w-full section{padding-left:64px!important;padding-right:64px!important}
+body>div.w-full .grid.grid-cols-2{grid-template-columns:repeat(3,minmax(0,1fr))}
+body>div.w-full .grid.grid-cols-1.sm\:grid-cols-2{grid-template-columns:repeat(3,minmax(0,1fr))}
+body>div.w-full .max-w-sm{max-width:720px}
+}
+</style>
 </head>
 <body class="text-neutral-900 bg-[#0e1117] selection:bg-brand-gold selection:text-white">
 
