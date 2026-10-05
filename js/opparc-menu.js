@@ -5,7 +5,18 @@
     const panel=document.querySelector('.opparc-menu-panel');
     const backdrop=document.querySelector('.opparc-menu-backdrop');
     if(!button||!panel||!backdrop) return;
-    const links=panel.querySelectorAll('a');
+    const links=panel.querySelectorAll('.opparc-menu-link');
+    const currentPage=(window.location.pathname.split('/').pop()||'index.html').toLowerCase();
+    links.forEach(function(link){
+      const raw=(link.getAttribute('href')||'').split('#')[0];
+      const target=(raw.split('/').pop()||'index.html').toLowerCase();
+      const isHome=(target===''||target==='index.html');
+      const active=(isHome&&currentPage==='index.html')||target===currentPage;
+      if(active){
+        link.classList.add('is-active');
+        link.setAttribute('aria-current','page');
+      }
+    });
 
     function setOpen(open){
       button.setAttribute('aria-expanded',String(open));
