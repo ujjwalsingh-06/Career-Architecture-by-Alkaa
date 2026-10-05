@@ -60,3 +60,9 @@ body.opparc-menu-open{overflow:hidden}
  .opparc-brand-tag{letter-spacing:.11em}
 }
 @media(prefers-reduced-motion:reduce){.opparc-menu-panel,.opparc-menu-backdrop,.opparc-menu-link,.opparc-menu-cta,.opparc-menu-note,.opparc-menu-button span{transition:none!important}}
+/* Active-page state */
+.opparc-menu-link.is-active{color:#c59b27!important;padding-left:12px!important}
+.opparc-menu-link.is-active:before{opacity:1!important;transform:scale(1)!important}
+.opparc-menu-link.is-active .arrow{opacity:1;transform:none}
+.opparc-menu-link.is-active:after{content:"YOU ARE HERE";position:absolute;right:42px;top:50%;transform:translateY(-50%);font-family:Inter,system-ui,sans-serif;font-size:7px;letter-spacing:.18em;font-weight:600;color:#777c85;white-space:nowrap}
+@media(max-width:420px){.opparc-menu-link.is-active:after{right:34px;font-size:6px}}
