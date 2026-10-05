@@ -1,4 +1,4 @@
-/* OPPARC Master Navigation */
+/* OPPARC Master Navigation — animated drawer */
 (function(){
   function initOPPARCMenu(){
     const button=document.querySelector('.opparc-menu-button');
@@ -14,16 +14,10 @@
       backdrop.classList.toggle('is-open',open);
       document.body.classList.toggle('opparc-menu-open',open);
     }
-    button.addEventListener('click',function(){
-      setOpen(button.getAttribute('aria-expanded')!=='true');
-    });
+    button.addEventListener('click',function(){setOpen(button.getAttribute('aria-expanded')!=='true')});
     backdrop.addEventListener('click',function(){setOpen(false)});
-    links.forEach(function(link){
-      link.addEventListener('click',function(){setOpen(false)});
-    });
-    document.addEventListener('keydown',function(e){
-      if(e.key==='Escape') setOpen(false);
-    });
+    links.forEach(function(link){link.addEventListener('click',function(){setOpen(false)})});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape') setOpen(false)});
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initOPPARCMenu);
   else initOPPARCMenu();
