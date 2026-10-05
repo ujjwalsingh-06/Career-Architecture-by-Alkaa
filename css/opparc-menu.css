@@ -1,38 +1,62 @@
-/* OPPARC Master Navigation — premium editorial drawer */
-.opparc-site-header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #e5e5e5;font-family:Inter,system-ui,sans-serif}
+/* OPPARC Master Navigation — premium editorial / luxury opening */
+.opparc-site-header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #e7e7e7;font-family:Inter,system-ui,sans-serif}
 .opparc-header-inner{min-height:72px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between}
 .opparc-brand{display:flex;flex-direction:column;justify-content:center;text-decoration:none;line-height:1;color:#111318}
 .opparc-brand-mark{font-family:"Playfair Display",Georgia,serif;font-size:24px;font-weight:700;letter-spacing:-.025em}
 .opparc-brand-mark .gold{color:#c59b27}
 .opparc-brand-tag{margin-top:4px;font-size:9px;letter-spacing:.15em;color:#6f737b;font-weight:500;white-space:nowrap}
-.opparc-menu-button{position:relative;z-index:1003;width:40px;height:40px;border-radius:10px;background:#fff;border:1px solid #d4d4d4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;cursor:pointer;transition:.35s ease;-webkit-tap-highlight-color:transparent}
-.opparc-menu-button span{display:block;height:2px;background:#111318;border-radius:99px;transition:transform .55s cubic-bezier(.16,1,.3,1),opacity .2s,width .35s,background .3s}
-.opparc-menu-button span:nth-child(1),.opparc-menu-button span:nth-child(2){width:20px}.opparc-menu-button span:nth-child(3){width:14px;align-self:flex-start;margin-left:10px}
-.opparc-menu-button[aria-expanded=true]{background:#111318;border-color:#111318}
-.opparc-menu-button[aria-expanded=true] span{background:#c59b27}
-.opparc-menu-button[aria-expanded=true] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
-.opparc-menu-button[aria-expanded=true] span:nth-child(2){opacity:0}
-.opparc-menu-button[aria-expanded=true] span:nth-child(3){width:20px;transform:translateY(-8px) translateX(-3px) rotate(-45deg);margin-left:10px}
 
-.opparc-menu-backdrop{position:fixed;inset:0;z-index:1000;background:rgba(7,9,13,.78);backdrop-filter:blur(10px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .55s ease,visibility .55s}
+.opparc-menu-button{position:relative;z-index:1003;width:40px;height:40px;border-radius:10px;background:#fff;border:1px solid #d8d8d8;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;cursor:pointer;transition:all .45s cubic-bezier(.16,1,.3,1);-webkit-tap-highlight-color:transparent}
+.opparc-menu-button span{display:block;height:1.8px;background:#111318;border-radius:99px;transition:transform .65s cubic-bezier(.16,1,.3,1),opacity .25s,width .45s,background .35s}
+.opparc-menu-button span:nth-child(1),.opparc-menu-button span:nth-child(2){width:20px}.opparc-menu-button span:nth-child(3){width:13px;align-self:flex-start;margin-left:10px}
+.opparc-menu-button[aria-expanded=true]{background:#0d1015;border-color:#c59b27;box-shadow:0 8px 25px rgba(0,0,0,.16)}
+.opparc-menu-button[aria-expanded=true] span{background:#c59b27}
+.opparc-menu-button[aria-expanded=true] span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.opparc-menu-button[aria-expanded=true] span:nth-child(2){opacity:0;transform:scaleX(.3)}
+.opparc-menu-button[aria-expanded=true] span:nth-child(3){width:20px;transform:translateY(-7.5px) translateX(-3px) rotate(-45deg)}
+
+.opparc-menu-backdrop{position:fixed;inset:0;z-index:1000;background:rgba(3,5,8,.78);backdrop-filter:blur(13px);-webkit-backdrop-filter:blur(13px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .8s ease,visibility .8s}
 .opparc-menu-backdrop.is-open{opacity:1;visibility:visible;pointer-events:auto}
-.opparc-menu-panel{position:fixed;right:0;top:0;bottom:0;width:min(92vw,560px);z-index:1001;background:#101319;color:#fff;border-left:1px solid rgba(197,155,39,.22);box-shadow:-30px 0 80px rgba(0,0,0,.38);transform:translateX(104%);opacity:.96;visibility:hidden;pointer-events:none;transition:transform .78s cubic-bezier(.16,1,.3,1),visibility .78s;overflow:auto}
-.opparc-menu-panel:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,rgba(197,155,39,.07),transparent 35%,rgba(255,255,255,.015));pointer-events:none}
-.opparc-menu-panel.is-open{transform:translateX(0);visibility:visible;pointer-events:auto}
-.opparc-menu-inner{position:relative;min-height:100%;padding:108px 30px 34px;display:flex;flex-direction:column}
-.opparc-menu-inner:before{content:"OPPARC";position:absolute;top:38px;left:30px;font-family:"Playfair Display",Georgia,serif;font-size:11px;letter-spacing:.35em;color:#c59b27}
-.opparc-menu-grid{display:flex;flex-direction:column;gap:2px}
-.opparc-menu-link{display:flex;align-items:center;justify-content:space-between;min-height:72px;padding:0 8px;border-bottom:1px solid rgba(255,255,255,.09);color:#f5f5f5;text-decoration:none;font-family:"Playfair Display",Georgia,serif;font-size:25px;letter-spacing:-.015em;transform:translateY(24px);opacity:0;transition:transform .7s cubic-bezier(.16,1,.3,1),opacity .5s ease,color .25s ease,padding .3s ease}
-.opparc-menu-link:first-child{border-top:1px solid rgba(255,255,255,.09)}
-.opparc-menu-link:hover{color:#c59b27;padding-left:14px}
-.opparc-menu-link .arrow{font-family:Inter,system-ui,sans-serif;color:#c59b27;font-size:18px;font-weight:300;opacity:.7;transform:translateX(-8px);transition:.3s}
-.opparc-menu-link:hover .arrow{opacity:1;transform:translateX(0)}
+
+.opparc-menu-panel{position:fixed;right:0;top:0;bottom:0;width:min(94vw,620px);z-index:1001;overflow:hidden;background:#0b0e13;color:#fff;border-left:1px solid rgba(197,155,39,.28);box-shadow:-40px 0 110px rgba(0,0,0,.5);transform:translate3d(105%,0,0);visibility:hidden;pointer-events:none;transition:transform 1s cubic-bezier(.16,1,.3,1),visibility 1s}
+.opparc-menu-panel.is-open{transform:translate3d(0,0,0);visibility:visible;pointer-events:auto}
+.opparc-menu-panel:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(197,155,39,.13),transparent 27%),linear-gradient(115deg,rgba(255,255,255,.025),transparent 35%);pointer-events:none}
+.opparc-menu-panel:after{content:"";position:absolute;left:28px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(197,155,39,.45) 20%,rgba(197,155,39,.18) 80%,transparent);pointer-events:none}
+
+.opparc-menu-inner{position:relative;min-height:100%;padding:118px 46px 38px 70px;display:flex;flex-direction:column}
+.opparc-menu-inner:before{content:"OPPARC";position:absolute;right:-18px;top:35px;font-family:"Playfair Display",Georgia,serif;font-size:clamp(64px,11vw,112px);font-weight:700;letter-spacing:-.06em;color:rgba(255,255,255,.035);line-height:1}
+.opparc-menu-inner:after{content:"ARCHITECTING OPPORTUNITY";position:absolute;left:70px;top:48px;font-size:8px;letter-spacing:.3em;color:#c59b27;font-weight:600}
+
+.opparc-menu-grid{display:flex;flex-direction:column;gap:0}
+.opparc-menu-link{position:relative;display:flex;align-items:center;justify-content:space-between;min-height:78px;padding:0 4px;border-bottom:1px solid rgba(255,255,255,.075);color:#f4f2ec;text-decoration:none;font-family:"Playfair Display",Georgia,serif;font-size:clamp(24px,3.4vw,32px);font-weight:500;letter-spacing:-.02em;transform:translate3d(45px,0,0);opacity:0;transition:transform .8s cubic-bezier(.16,1,.3,1),opacity .55s ease,color .35s ease,padding .35s ease}
+.opparc-menu-link:first-child{border-top:1px solid rgba(255,255,255,.075)}
+.opparc-menu-link:before{content:"";position:absolute;left:-42px;width:4px;height:4px;border-radius:50%;background:#c59b27;opacity:0;transform:scale(0);transition:.35s ease}
+.opparc-menu-link:hover{color:#d8b65b;padding-left:12px}
+.opparc-menu-link:hover:before{opacity:1;transform:scale(1)}
+.opparc-menu-link .arrow{font-family:Inter,system-ui,sans-serif;font-size:18px;font-weight:300;color:#c59b27;opacity:0;transform:translateX(-14px);transition:.4s cubic-bezier(.16,1,.3,1)}
+.opparc-menu-link:hover .arrow{opacity:1;transform:none}
 .opparc-menu-panel.is-open .opparc-menu-link{transform:none;opacity:1}
-.opparc-menu-panel.is-open .opparc-menu-link:nth-child(1){transition-delay:.12s}.opparc-menu-panel.is-open .opparc-menu-link:nth-child(2){transition-delay:.18s}.opparc-menu-panel.is-open .opparc-menu-link:nth-child(3){transition-delay:.24s}.opparc-menu-panel.is-open .opparc-menu-link:nth-child(4){transition-delay:.30s}.opparc-menu-panel.is-open .opparc-menu-link:nth-child(5){transition-delay:.36s}.opparc-menu-panel.is-open .opparc-menu-link:nth-child(6){transition-delay:.42s}
-.opparc-menu-cta{display:flex;align-items:center;justify-content:space-between;margin-top:26px;padding:17px 18px;border:1px solid rgba(197,155,39,.55);background:rgba(197,155,39,.08);color:#e7c56e;text-decoration:none;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transform:translateY(22px);opacity:0;transition:transform .7s cubic-bezier(.16,1,.3,1) .48s,opacity .5s ease .48s,background .25s}
-.opparc-menu-panel.is-open .opparc-menu-cta{transform:none;opacity:1}.opparc-menu-cta:hover{background:#c59b27;color:#111318}
-.opparc-menu-note{margin-top:auto;padding-top:35px;color:#777c85;font-size:9px;letter-spacing:.18em;text-transform:uppercase;text-align:left;opacity:0;transform:translateY(10px);transition:.5s ease .55s}.opparc-menu-panel.is-open .opparc-menu-note{opacity:1;transform:none}
+.opparc-menu-panel.is-open .opparc-menu-link:nth-child(1){transition-delay:.16s}.opparc-menu-panel.is-open .opparc-menu-link:nth-child(2){transition-delay:.22s}.opparc-menu-panel.is-open .opparc-menu-link:nth-child(3){transition-delay:.28s}.opparc-menu-panel.is-open .opparc-menu-link:nth-child(4){transition-delay:.34s}.opparc-menu-panel.is-open .opparc-menu-link:nth-child(5){transition-delay:.40s}.opparc-menu-panel.is-open .opparc-menu-link:nth-child(6){transition-delay:.46s}
+
+.opparc-menu-cta{position:relative;display:flex;align-items:center;justify-content:space-between;margin-top:28px;padding:18px 20px;border:1px solid rgba(197,155,39,.55);background:linear-gradient(90deg,rgba(197,155,39,.12),rgba(197,155,39,.035));color:#d9b85e;text-decoration:none;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;transform:translateY(22px);opacity:0;transition:transform .75s cubic-bezier(.16,1,.3,1) .52s,opacity .5s ease .52s,background .35s,color .35s}
+.opparc-menu-panel.is-open .opparc-menu-cta{transform:none;opacity:1}
+.opparc-menu-cta:hover{background:#c59b27;color:#0b0e13}
+.opparc-menu-note{margin-top:auto;padding-top:30px;color:#696f78;font-size:8px;letter-spacing:.2em;text-transform:uppercase;text-align:left;opacity:0;transform:translateY(12px);transition:opacity .5s ease .62s,transform .7s cubic-bezier(.16,1,.3,1) .62s}
+.opparc-menu-panel.is-open .opparc-menu-note{opacity:1;transform:none}
 body.opparc-menu-open{overflow:hidden}
-@media(min-width:768px){.opparc-header-inner{padding-left:28px;padding-right:28px}.opparc-menu-inner{padding-left:46px;padding-right:46px}.opparc-menu-inner:before{left:46px}.opparc-menu-link{font-size:31px;min-height:82px}}
-@media(max-width:420px){.opparc-menu-panel{width:92vw}.opparc-menu-inner{padding-left:25px;padding-right:25px}.opparc-menu-inner:before{left:25px}.opparc-menu-link{font-size:23px;min-height:66px}.opparc-brand-tag{letter-spacing:.11em}}
+
+@media(min-width:768px){
+ .opparc-header-inner{padding-left:28px;padding-right:28px}
+ .opparc-menu-panel{width:min(620px,62vw)}
+}
+@media(max-width:420px){
+ .opparc-menu-panel{width:94vw}
+ .opparc-menu-inner{padding:108px 28px 30px 58px}
+ .opparc-menu-inner:after{left:58px}
+ .opparc-menu-panel:after{left:22px}
+ .opparc-menu-link{min-height:66px;font-size:23px}
+ .opparc-menu-link:before{left:-34px}
+ .opparc-menu-inner:before{font-size:72px;right:-12px}
+ .opparc-brand-tag{letter-spacing:.11em}
+}
 @media(prefers-reduced-motion:reduce){.opparc-menu-panel,.opparc-menu-backdrop,.opparc-menu-link,.opparc-menu-cta,.opparc-menu-note,.opparc-menu-button span{transition:none!important}}
