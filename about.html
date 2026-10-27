@@ -41,6 +41,50 @@ html,body{margin:0}
 body>div.w-full{max-width:1180px!important;margin:auto;box-shadow:0 0 50px rgba(0,0,0,.12)}
 body>div.w-full section{padding-left:64px!important;padding-right:64px!important}
 }
+
+@media (max-width: 767px) {
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  body > div.w-full {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    overflow-x: clip !important;
+  }
+  body > div.w-full > div {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+  body > div.w-full main {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: clip !important;
+  }
+  body > div.w-full main > section {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    flex: 0 0 100% !important;
+  }
+  body > div.w-full footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
 </style>
 </head>
 <body class="bg-brand-charcoal text-slate-200 font-sans antialiased selection:bg-brand-amber selection:text-white">
