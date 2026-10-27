@@ -57,6 +57,10 @@ body>div.w-full.max-w-\[440px\] header{padding-left:56px!important;padding-right
 <label class="block text-xs font-semibold">Phone Number / WhatsApp <span class="text-[#C59B27]">*</span><div class="flex gap-2 mt-1"><select class="opparc-input w-24 h-[52px] rounded-xl border border-[#D5D2C9] bg-white text-xs" name="countryCode"><option>+91</option><option>+971</option><option>+44</option><option>+1</option><option>+65</option></select><input class="opparc-input flex-1 h-[52px] px-4 rounded-xl border border-[#D5D2C9] bg-white text-sm" name="phone" placeholder="8726257039" type="tel" required/></div></label>
 <label class="block text-xs font-semibold">Current Role / Seniority Level <span class="text-[#C59B27]">*</span><select class="opparc-input mt-1 w-full h-[52px] px-4 rounded-xl border border-[#D5D2C9] bg-white text-sm" name="seniority" required><option value="">Select executive tier...</option><option>C-Suite</option><option>Senior Vice President / VP</option><option>Executive Director / Managing Director</option><option>BU Head / General Manager</option><option>Senior Leader / Function Head</option></select></label>
 <label class="block text-xs font-semibold">Primary Career Focus / Challenge <span class="text-[#C59B27]">*</span><select class="opparc-input mt-1 w-full h-[52px] px-4 rounded-xl border border-[#D5D2C9] bg-white text-sm" name="primaryChallenge" required><option value="">Select primary objective...</option><option>Overcoming Executive Stagnation / Plateau</option><option>Executive Market Visibility & Headhunter Outreach</option><option>Cross-Border / Global Market Transition</option><option>Board Advisory / Non-Executive Director Path</option><option>Compensation Benchmark & Equity Realignment</option></select></label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<label class="block text-xs font-semibold">Preferred Call Date <span class="text-[#C59B27]">*</span><input class="opparc-input mt-1 w-full h-[52px] px-4 rounded-xl border border-[#D5D2C9] bg-white text-sm" name="preferredDate" id="preferredDate" type="date" required/><span class="block text-[10px] font-normal text-[#656973] mt-1">Choose a date that works for you.</span></label>
+<label class="block text-xs font-semibold">Suitable Time to Call (IST) <span class="text-[#C59B27]">*</span><select class="opparc-input mt-1 w-full h-[52px] px-4 rounded-xl border border-[#D5D2C9] bg-white text-sm" name="preferredTime" required><option value="">Select a time window...</option><option>9:00 AM – 11:00 AM</option><option>11:00 AM – 1:00 PM</option><option>1:00 PM – 3:00 PM</option><option>3:00 PM – 5:00 PM</option><option>5:00 PM – 7:00 PM</option><option>7:00 PM – 8:00 PM</option></select><span class="block text-[10px] font-normal text-[#656973] mt-1">India Standard Time (IST).</span></label>
+</div>
 <button class="w-full h-[54px] rounded-xl bg-gradient-to-r from-[#C59B27] via-[#D4AF37] to-[#B2871A] text-white font-bold text-sm tracking-wider uppercase shadow-gold-glow" type="submit">Submit & Start Diagnostic →</button>
 <a class="w-full h-[48px] rounded-xl border border-[#25D366]/40 bg-[#25D366]/5 text-[#075E54] font-semibold text-xs flex items-center justify-center" href="https://wa.me/918726257039?text=Hi%20Alka%2C%20I%20am%20interested%20in%20the%20OPPARC%20Career%20Market%20Diagnostic" target="_blank" rel="noopener noreferrer">Instant Advisory via WhatsApp (+91 8726257039)</a>
 <p class="text-[11px] leading-relaxed text-[#30343B] text-center pt-2">🔒 <strong>Strictly Confidential.</strong> Your information is reviewed solely by Alka Srivastav and the executive advisory desk.</p>
@@ -74,6 +78,10 @@ body>div.w-full.max-w-\[440px\] header{padding-left:56px!important;padding-right
 <footer class="bg-[#101115] text-[#A6ABB7] px-6 py-8 text-center"><div class="font-serif text-2xl font-bold text-white">OPP<span class="text-[#C59B27]">A</span>RC</div><p class="text-[11px] uppercase tracking-[.18em] text-[#C59B27] font-semibold mt-2">Architecting Opportunities. Transforming Leadership.</p><p class="text-[11px] mt-2">India • Middle East • Europe • Southeast Asia • Africa</p><div class="w-16 h-px bg-[#262833] mx-auto my-4"></div><p class="text-[10px] text-gray-500">© 2026 OPPARC Executive Advisory. All rights reserved.</p></footer>
 </div>
 <script>
+const preferredDateInput=document.getElementById('preferredDate');
+const today=new Date();
+const localToday=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10);
+preferredDateInput.min=localToday;
 document.getElementById('career-diagnostic-form').addEventListener('submit',function(e){
 e.preventDefault();
 const form=e.currentTarget;
@@ -84,6 +92,8 @@ const country=data.get('countryCode')||'';
 const phone=data.get('phone')||'';
 const seniority=data.get('seniority')||'';
 const challenge=data.get('primaryChallenge')||'';
+const preferredDate=data.get('preferredDate')||'';
+const preferredTime=data.get('preferredTime')||'';
 const subject='OPPARC Career Market Diagnostic — '+name;
 const body=[
 'Hello Alkaa,',
@@ -96,6 +106,8 @@ const body=[
 'Phone / WhatsApp: '+country+' '+phone,
 'Current Role / Seniority Level: '+seniority,
 'Primary Career Focus / Challenge: '+challenge,
+'Preferred Call Date: '+preferredDate,
+'Suitable Time to Call (IST): '+preferredTime,
 '',
 'Please connect with me regarding the diagnostic.',
 '',
