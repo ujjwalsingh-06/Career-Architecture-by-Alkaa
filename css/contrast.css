@@ -36,3 +36,8 @@ input::placeholder,textarea::placeholder,select:invalid
 :is(.bg-white,.bg-brand-surface,.bg-brand-cream,[class~="bg-[#f8f6f0]"],[class~="bg-[#f9f8f6]"],[class~="bg-[#fbfbfa]"],.book-content)
 :is(.font-light,[class*="text-neutral-400"],[class*="text-neutral-500"],[class*="text-gray-400"],[class*="text-gray-500"])
 { font-weight: 500; }
+
+/* Light cards/sections take precedence when nested inside dark page layouts. */
+:is(.bg-white,.bg-brand-surface,.bg-brand-cream,[class~="bg-[#f8f6f0]"],[class~="bg-[#f9f8f6]"],[class~="bg-[#fbfbfa]"],[class~="bg-[#fffdf9]"],[class~="bg-[#fffcef]"],[class~="bg-[#fafbfc]"],[class~="bg-[#fdfaf5]"],[class~="bg-[#f8f9fb]"],[class~="bg-[#f9f9f7]"],[class~="bg-[#f2f1ec]"],[class~="bg-[#FBFBFA]"],[class~="bg-[#EFECE6]"],[class~="bg-[#ECEAE3]"],[class~="bg-[#E8E5DD]"],.book-content)
+:is([class*="text-gray-"],[class*="text-slate-300"],[class*="text-slate-400"],[class*="text-slate-500"],[class*="text-slate-600"],[class*="text-neutral-200"],[class*="text-neutral-300"],[class*="text-neutral-400"],[class*="text-neutral-500"],[class*="text-neutral-600"],[class*="text-stone-500"],[class*="text-stone-600"],[class*="text-zinc-300"],[class*="text-zinc-400"],[class*="text-zinc-500"],[style*="#999"],[style*="#aaa"],[style*="#bbb"],[style*="#666"],[style*="#777"],[style*="#888"],[style*="#6b7280"],[style*="rgba(0,0,0,."])
+{ color: var(--contrast-light-muted) !important; opacity: 1 !important; }
