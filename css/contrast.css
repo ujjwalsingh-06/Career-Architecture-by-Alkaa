@@ -1,0 +1,38 @@
+/* OPPARC readability tokens — text contrast only */
+:root {
+  --contrast-light-body: #1F2937;
+  --contrast-light-muted: #374151;
+  --contrast-light-heading: #0F172A;
+  --contrast-dark-body: #F3F4F6;
+  --contrast-dark-muted: #E5E7EB;
+  --contrast-dark-heading: #FFFFFF;
+}
+
+/* Light surfaces: darken only faded/neutral text; preserve gold accents. */
+:is(.bg-white,.bg-brand-surface,.bg-brand-cream,.bg-[#f8f6f0],.bg-[#f9f8f6],.bg-[#fbfbfa],.bg-[#fffdf9],.bg-[#fffcef],.bg-[#fafbfc],.bg-[#fdfaf5],.bg-[#f8f9fb],.bg-[#f9f9f7],.bg-[#f2f1ec],.bg-[#FBFBFA],.bg-[#EFECE6],.bg-[#ECEAE3],.bg-[#E8E5DD],.book-content)
+:is([class*="text-gray-"],[class*="text-slate-300"],[class*="text-slate-400"],[class*="text-slate-500"],[class*="text-slate-600"],[class*="text-neutral-200"],[class*="text-neutral-300"],[class*="text-neutral-400"],[class*="text-neutral-500"],[class*="text-neutral-600"],[class*="text-stone-500"],[class*="text-stone-600"],[class*="text-zinc-300"],[class*="text-zinc-400"],[class*="text-zinc-500"],[style*="#999"],[style*="#aaa"],[style*="#bbb"],[style*="#666"],[style*="#777"],[style*="#888"],[style*="#6b7280"],[style*="rgba(0,0,0,."])
+{
+  color: var(--contrast-light-muted) !important;
+  opacity: 1 !important;
+}
+
+/* Main body copy on light surfaces. */
+:is(.bg-white,.bg-brand-surface,.bg-brand-cream,.bg-[#f8f6f0],.bg-[#f9f8f6],.bg-[#fbfbfa],.bg-[#fffdf9],.bg-[#fffcef],.bg-[#fafbfc],.bg-[#fdfaf5],.bg-[#f8f9fb],.bg-[#f9f9f7],.bg-[#f2f1ec],.bg-[#FBFBFA],.bg-[#EFECE6],.bg-[#ECEAE3],.bg-[#E8E5DD],.book-content) :is(p,li,dd,dt,figcaption,label)
+{ color: var(--contrast-light-body); }
+
+/* Dark surfaces: brighten faded/neutral copy without touching gold or white text. */
+:is(.bg-brand-charcoal,.bg-brand-dark,.bg-[#0d1015],.bg-[#0e1117],.bg-[#0e1218],.bg-[#0d1117],.bg-[#090b0d],.bg-[#07090d],.bg-[#08090c],.bg-[#101115],.bg-[#11141c],.bg-[#151820],.bg-[#151b24],.bg-neutral-900,.book-hero,.op-pace,.op-final)
+:is([class*="text-gray-"],[class*="text-slate-200"],[class*="text-slate-300"],[class*="text-slate-400"],[class*="text-slate-500"],[class*="text-neutral-200"],[class*="text-neutral-300"],[class*="text-neutral-400"],[class*="text-neutral-500"],[class*="text-neutral-600"],[class*="text-stone-"],[class*="text-zinc-300"],[class*="text-zinc-400"],[class*="text-zinc-500"],[style*="#999"],[style*="#aaa"],[style*="#bbb"],[style*="#666"],[style*="#777"],[style*="#888"],[style*="rgba(255,255,255,."])
+{
+  color: var(--contrast-dark-muted) !important;
+  opacity: 1 !important;
+}
+
+/* Forms: readable placeholders on the existing light form fields. */
+input::placeholder,textarea::placeholder,select:invalid
+{ color: var(--contrast-light-muted) !important; opacity: 1 !important; }
+
+/* Preserve existing font families, sizes, spacing and weights; strengthen only faded light text. */
+:is(.bg-white,.bg-brand-surface,.bg-brand-cream,.bg-[#f8f6f0],.bg-[#f9f8f6],.bg-[#fbfbfa],.book-content)
+:is(.font-light,[class*="text-neutral-400"],[class*="text-neutral-500"],[class*="text-gray-400"],[class*="text-gray-500"])
+{ font-weight: 500; }
